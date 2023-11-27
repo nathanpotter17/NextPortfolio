@@ -23,7 +23,6 @@ export default function Contact() {
       className={styles.form}
     >
       <h2 className={styles.headform}>Let's get in Touch.</h2>
-      <br />
       <p>Type your email and a message.</p>
       <div className={styles.inputGroup}>
         <label className={styles.label} htmlFor="email">

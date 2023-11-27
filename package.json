@@ -1,6 +1,6 @@
 {
-  "name": "testemail",
-  "version": "0.1.0",
+  "name": "nspportfolio",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": "18.x"
@@ -15,7 +15,6 @@
     "@react-email/components": "0.0.11",
     "next": "14.0.3",
     "react": "^18",
-    "react-code-blocks": "^0.1.5",
     "react-dom": "^18",
     "react-email": "1.9.5",
     "react-hot-toast": "^2.4.1",

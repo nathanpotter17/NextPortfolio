@@ -73,7 +73,7 @@
 
 .form {
   display: flex;
-  width: 89%;
+  width: 90%;
   max-width: 620px;
   flex-direction: column;
   background-color: #ffffff;
@@ -102,6 +102,9 @@
   border: none;
   color: var(--text);
   outline: none;
+  font-size: small;
+  font-family: inherit;
+  resize: none;
   padding: 10px;
 }
 
@@ -113,6 +116,8 @@
   border: none;
   color: var(--text);
   outline: none;
+  font-size: small;
+  font-family: inherit;
   resize: none;
   padding: 10px;
 }
