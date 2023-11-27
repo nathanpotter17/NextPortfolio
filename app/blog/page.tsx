@@ -8,16 +8,16 @@ const Blog: React.FC = () => {
       <main className={styles.main}>
         <article className={styles.article}>
           <img
-            src="https://placekitten.com/800/400"
+            src="/serenity2.png"
             alt="Blog Post Image"
             className={styles.image}
           />
-          <h2 className={styles.postTitle}>Creating ThreeJS Apps</h2>
+          <h2 className={styles.postTitle}>Creating ThreeJS Apps with React</h2>
           <p className={styles.postDate}>Published on October 30, 2023</p>
           <p className={styles.postContent}>
             Building immersive 3D web applications has become easier with the
-            integration of React, JSX, and Three.js. Let's dive into creating a
-            basic Three.js scene within a React app.
+            integration of React and Three.js. Let's dive into creating a basic
+            Three.js scene within a React app.
           </p>
           <Link href="/blog/p1" className={styles.readMoreLink}>
             Read more

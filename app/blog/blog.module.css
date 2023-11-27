@@ -52,12 +52,12 @@
   margin-top: 40px;
   margin-bottom: 100px;
   padding-top: 20px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--gray50);
 }
 
 .footer p {
   margin: 0;
-  color: #888;
+  color: var(--gray50);
   font-size: 14px;
 }
 

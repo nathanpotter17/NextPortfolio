@@ -24,16 +24,7 @@ export default function Contact() {
     >
       <h2 className={styles.headform}>Let's get in Touch.</h2>
       <br />
-      <p style={{ paddingBottom: "20px" }}>
-        Please contact me directly at{" "}
-        <a
-          style={{ textDecoration: "underline", color: "#007aff" }}
-          href="mailto:nathanscottpotter@gmail.com"
-        >
-          nathanscottpotter@gmail.com
-        </a>{" "}
-        or through this form.
-      </p>
+      <p>Type your email and a message.</p>
       <div className={styles.inputGroup}>
         <label className={styles.label} htmlFor="email">
           Email

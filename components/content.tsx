@@ -8,9 +8,11 @@ export default function Content() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
-    { src: "/Gilded.png" },
+    { src: "/intotheye.png" },
     { src: "/Soldiers.png" },
-    { src: "/st2.png" },
+    { src: "/Gilded.png" },
+    { src: "/Boat4.png" },
+    { src: "/serenity2.png" },
   ];
 
   const nextSlide = () => {
@@ -36,15 +38,13 @@ export default function Content() {
         <div className={styles.currentEvents}>
           <div className={styles.event}>
             <h2>Locations</h2>
-            <p>San Francisco, CA</p>
+            <p>San Fran, CA</p>
             <p>Vancouver, BC</p>
           </div>
           <div className={styles.event}>
             <h2>Skills</h2>
-            <p>
-              3d Rendering and Animation, Javascript, Python,{" "}
-              <Link href="/blog">...more</Link>
-            </p>
+            <p>3d Animation, Javascript, Python,</p>
+            <Link href="/blog">...more</Link>
           </div>
         </div>
         <div className={styles.currentEvents}>
@@ -62,12 +62,10 @@ export default function Content() {
           </div>
           <div className={styles.event}>
             <h2>Projects</h2>
-            <p>
-              Frontend, Data, Full-Stack Web,{" "}
-              <a className={styles.a} href="https://github.com/nathanpotter17">
-                ...here
-              </a>
-            </p>
+            <p>Frontend, Data, Full-Stack Web,</p>
+            <a className={styles.a} href="https://github.com/nathanpotter17">
+              ...here
+            </a>
           </div>
         </div>
         <div className={styles.simplecarousel}>

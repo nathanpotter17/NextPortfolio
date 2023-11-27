@@ -7,7 +7,7 @@ export default function SubmitBtn() {
 
   return (
     <button type="submit" className={styles.button} disabled={pending}>
-      {pending ? <p>Sending...</p> : <p>Contact Me</p>}
+      {pending ? "Sending..." : "Contact Me"}
     </button>
   );
 }

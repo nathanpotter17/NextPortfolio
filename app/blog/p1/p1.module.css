@@ -1,5 +1,5 @@
 .container {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
   margin-top: 100px;
   padding: 20px;
@@ -15,7 +15,7 @@
 }
 
 .date {
-  color: #888;
+  color: var(--gray50);
   margin-bottom: 20px;
 }
 
@@ -57,17 +57,23 @@
   margin-top: 40px;
   margin-bottom: 100px;
   padding-top: 20px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--gray50);
 }
 
 .footer p {
   margin: 0;
-  color: #888;
+  color: var(--gray50);
   font-size: 14px;
 }
 
 @media screen and (max-width: 800px) {
   .container {
     margin-top: 80px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .backButton {
+    background-color: var(--bg-dark-elements);
   }
 }

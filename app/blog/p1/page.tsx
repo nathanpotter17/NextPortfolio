@@ -9,22 +9,32 @@ export default function Post1() {
     <div className={styles.container}>
       <div className={styles.main}>
         <img
-          src="https://placekitten.com/800/400"
+          src="/serenity2.png"
           alt="Blog Post Image"
           className={styles.image}
         />
         <h1 className={styles.title}>Creating ThreeJS Apps With React</h1>
         <p className={styles.date}>Published on October 30, 2023</p>
         <div className={styles.content}>
+          {/* Introduction */}
           <p>
             Building immersive 3D web applications has become easier with the
-            integration of React, JSX, and Three.js. Let's dive into creating a
-            basic Three.js scene within a React app.
+            integration of React and Three.js. In this post, we'll focus on the
+            powerful capabilities of
           </p>
+          <a
+            style={{ textDecoration: "underline" }}
+            href="https://github.com/pmndrs/react-three-fiber"
+          >
+            React Three Fiber
+          </a>{" "}
+          <p>for creating 3D scenes within a React app.</p>
           <br />
           <p>
-            Start by setting up your React app and installing the Three.js
-            library:
+            Start by setting up your React app and installing the React Three
+            Fiber library, this will default to rendering you app contents at
+            the root, which will need to change to <code>{"<ThreeScene>"}</code>
+            . This approach can be adapted for typescript.
           </p>
           <br />
           <CopyBlock
@@ -32,7 +42,7 @@ export default function Post1() {
             text={`
               npx create-react-app my-threejs-app 
               cd my-threejs-app 
-              npm install three@latest
+              npm install @react-three/fiber@latest
             `}
             codeBlock
             theme={dracula}
@@ -40,92 +50,25 @@ export default function Post1() {
           />
           <br />
           <p>
-            Create a new component, <code>ThreeScene.js</code>, to contain your
-            Three.js scene logic. We will pass this to the root to be rendered.
-            I will provide the native Three JS approach first, and then{" "}
-            <a
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/pmndrs/react-three-fiber"
-            >
-              React Three Fiber
-            </a>{" "}
-            JSX.
+            Create a new component, <code>ThreeScene.jsx</code>, to contain your
+            3D scene logic using React Three Fiber.
           </p>
           <br />
           <CopyBlock
             language="jsx"
             text={`
-            // ThreeScene.js
-            import * as THREE from 'three';
-
-            const ThreeScene: React.FC = () => {
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                // Assuming sceneRef is declared somewhere
-                // sceneRef.current.appendChild(renderer.domElement);
-
-                // Add a cube to the scene
-                const geometry = new THREE.BoxGeometry();
-                const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-                const cube = new THREE.Mesh(geometry, material);
-                scene.add(cube);
-
-                // Position the camera
-                camera.position.z = 5;
-
-                // Animation loop
-                const animate = () => {
-                  requestAnimationFrame(animate);
-
-                  // Rotate the cube
-                  cube.rotation.x += 0.01;
-                  cube.rotation.y += 0.01;
-
-                  renderer.render(scene, camera);
-                };
-
-                animate();
-                
-                return <div ref={/* ref to be assigned */} />;
-            };
-
-            export default ThreeScene;
-            `}
-            codeBlock
-            theme={dracula}
-            showLineNumbers={false}
-          />
-          {/* Assuming sceneRef is declared somewhere */}
-          <br />
-          <p>
-            Now, the React Three Fiber approach. Here we are using helper
-            functions for interaction and <code>requestAnimationFrame()</code>{" "}
-            from PMNDRS Dev Collective - <code>@react-three/fiber</code>. The
-            R3F ecosystem offers remarkably convenient hooks for various tasks,
-            including physics, shadows, selective rendering, and HDR support —
-            all essential elements for a high-performing 3D application. The app
-            is then rendered at the root or passed into <code>App.js</code>.
-          </p>
-          <br />
-          <CopyBlock
-            language="jsx"
-            text={`
-            // PMNDRS + Paul Henschel, App.jsx
-            import { useRef, useState } from 'react'
+            // ThreeScene.jsx
             import { Canvas, useFrame } from '@react-three/fiber'
             import { OrbitControls } from '@react-three/drei'
+            import { useState, useRef } from 'react';
 
             function Box(props) {
-              // This reference gives us direct access to the THREE.Mesh object
-              const ref = useRef()
-              // Hold state for hovered and clicked events
-              const [hovered, hover] = useState(false)
-              const [clicked, click] = useState(false)
-              // Subscribe this component to the render-loop, rotate the mesh every frame
-              useFrame((state, delta) => (ref.current.rotation.x += delta))
-              // Return the view, these are regular Threejs elements expressed in JSX
+              const ref = useRef();
+              const [hovered, hover] = useState(false);
+              const [clicked, click] = useState(false);
+
+              useFrame((state, delta) => (ref.current.rotation.x += delta));
+
               return (
                 <mesh
                   {...props}
@@ -137,10 +80,10 @@ export default function Post1() {
                   <boxGeometry args={[1, 1, 1]} />
                   <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
                 </mesh>
-              )
+              );
             }
 
-            const App: React.FC = () => {
+            const ThreeScene = () => {
               return (
                 <Canvas>
                   <ambientLight intensity={Math.PI / 2} />
@@ -150,82 +93,35 @@ export default function Post1() {
                   <Box position={[1.2, 0, 0]} />
                   <OrbitControls />
                 </Canvas>
-              )
-            }
-
-            export default App;
-            `}
-            codeBlock
-            theme={dracula}
-            showLineNumbers={false}
-          />
-          <br />
-          <p>
-            Finally, embed your <code>ThreeScene</code> component in your main
-            application, or render it at the root:
-          </p>
-          <br />
-          <CopyBlock
-            language="jsx"
-            text={`
-            // App.js
-            import React from 'react';
-            import ThreeScene from './ThreeScene';
-
-            const App: React.FC = () => {
-              return (
-                <div className="App">
-                  <header className="App-header">
-                    <h1>My Three.js App</h1>
-                  </header>
-                  <main>
-                    <ThreeScene />
-                  </main>
-                </div>
               );
-            }
+            };
 
-            export default App;
+            export default ThreeScene;
             `}
             codeBlock
             theme={dracula}
             showLineNumbers={false}
           />
           <br />
-          <CopyBlock
-            language="jsx"
-            text={`
-            import { createRoot } from 'react-dom/client'
-            import './styles.css'
-            import App from './App'
-
-            createRoot(document.getElementById('root')).render(<App />)
-            `}
-            codeBlock
-            theme={dracula}
-            showLineNumbers={false}
-          />
-          <br />
+          <p>To maximize readability and performance, consider using the</p>
+          <a
+            style={{ textDecoration: "underline" }}
+            href="https://github.com/pmndrs"
+          >
+            PMNDRS
+          </a>
           <p>
-            Personally, I recommend using the{" "}
-            <a
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/pmndrs"
-            >
-              PMNDRS
-            </a>{" "}
-            R3F + JSX approach for readability and performance. It behaves
-            really well when you fully understand how the browser repaints, how
-            React's component tree updates, and how Three JS properties interact
-            with the rendering context is essential for updating the scene,
-            camera, and other elements. How you want to add features to your app
-            is up to you, but I prefer to scope essential features as
-            Higher-order Components (HOCs), 're-usables' as Stateless Functional
-            Components, and use Pure Components for components that need finer
-            control over when to re-render. Once you're finished scoping your
-            components, Customize the styling of your app using CSS, and when
-            you're ready, use <code>npm run build</code> to generate the files
-            needed to deploy on hosting providers like Github Pages.
+            React Three Fiber approach. Understanding how the browser repaints,
+            how React's component tree updates, and how React Three Fiber
+            properties interact with the rendering context is essential for
+            creating high-performing 3D applications. As you design your app,
+            consider scoping essential features as Higher-order Components
+            (HOCs), declaring 're-usables' as Stateless Functional Components,
+            and implementing Pure Components for components that require finer
+            control over re-rendering. Once your components are scoped,
+            customize the styling of your app using CSS, and when ready, use{" "}
+            <code>npm run build</code> to generate the necessary files for
+            deployment on hosting providers like Github Pages.
           </p>
         </div>
       </div>

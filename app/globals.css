@@ -4,6 +4,13 @@
   --text: #000000;
   --textSoft: #0e6ba8;
   --gray50: #acacac50;
+
+  --even: #0f0f0f50;
+
+  --bg-dark: #020202;
+  --bg-dark-elements: #0e0e0e;
+  --bgSoft-dark: #113347;
+  --text-dark: #ffffff;
 }
 
 * {
@@ -21,4 +28,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
 }
