@@ -1,0 +1,266 @@
+.container {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.pagecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+.header {
+  text-align: center;
+  font-weight: 450;
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.desc {
+  font-size: 24px;
+  font-weight: 350;
+  margin: 5px;
+  color: var(--bgSoft);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputGroup input {
+  min-height: 30px;
+  min-width: 250px;
+  border-radius: 5px;
+  background-color: var(--gray50);
+  border: none;
+  color: var(--text);
+  outline: none;
+  padding: 10px;
+}
+
+.inputGroup textarea {
+  min-height: 70px;
+  min-width: 250px;
+  border-radius: 5px;
+  background-color: var(--gray50);
+  border: none;
+  color: var(--text);
+  outline: none;
+  resize: none;
+  padding: 10px;
+}
+
+.button {
+  padding: 10px;
+  min-width: 250px;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bgSoft);
+  padding: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.currentEvents {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.label {
+  margin-bottom: 3px;
+  display: block;
+  font-weight: medium;
+  color: var(--bgSoft);
+}
+
+.event {
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--bgSoft);
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.event h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event p {
+  font-size: 1rem;
+}
+
+.headform {
+  margin-bottom: 20px;
+}
+
+.currentEvents a {
+  color: #007aff;
+  text-decoration: underline;
+}
+
+.simplecarousel {
+  width: 100%;
+  max-height: auto;
+  max-width: 620px;
+  margin: 20px;
+}
+
+.carouselcontainer {
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carouselinner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carouselslide {
+  flex: 0 0 100%;
+  box-sizing: content-box;
+}
+
+.carouselslide.active {
+  display: block;
+  opacity: 1;
+}
+
+.carouselslide img {
+  width: 95%;
+  height: auto;
+  display: block;
+  margin: 2% auto;
+  border-radius: 10px;
+}
+
+.prevbutton,
+.nextbutton {
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  cursor: pointer;
+  background: var(--bg);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.prevbutton {
+  left: 2%;
+}
+
+.nextbutton {
+  right: 2%;
+}
+
+.footer {
+  text-align: center;
+  justify-content: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.footer p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.resumeDownload {
+  text-align: right;
+}
+
+.resumeDownload a {
+  color: white;
+  text-decoration: none;
+}
+
+.resumeLink {
+  display: inline-block;
+  margin-top: 8px;
+  color: white;
+  padding: 8px 8px;
+  background-color: var(--bgSoft);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.resumeLink:hover {
+  transform: scale(1.05); /* Change the color on hover if needed */
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    margin-top: 70px;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .desc {
+    font-size: 1.5rem;
+  }
+
+  .pagecontent {
+    padding: 0 20px;
+  }
+
+  .event {
+    width: 100%;
+  }
+
+  .simplecarousel {
+    max-width: 100%;
+  }
+
+  .carouselinner {
+    width: 100%;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea,
+  .button {
+    min-width: 100%;
+  }
+}

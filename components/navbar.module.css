@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 10px 20px;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  margin-right: auto;
+  color: var(--text);
+}
+
+.bcont {
+  display: flex;
+  gap: 10px;
+}
+
+.navbutton {
+  display: flex;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--bgSoft);
+  padding: 10px 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbutton:hover {
+  transform: scale(1.05);
+}
