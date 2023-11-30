@@ -4,5 +4,5 @@
 ### Reacts to the system theme:
 ![desktop dark](./deskB.png)
 ![desktop light](./deskL.png)
-![mobile dark](./mobB.png)
+![mobile dark](./mobD.png)
 ![mobile light](./mobL.png)
