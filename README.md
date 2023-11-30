@@ -5,4 +5,4 @@
 ![desktop dark](./deskB.png)
 ![desktop light](./deskL.png)
 ![mobile dark](./mobD.png)
-![mobile light](./mobL.png)
+![mobile light](./mobG.png)
