@@ -7,8 +7,21 @@ const Blog: React.FC = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <article className={styles.article}>
+          <img src="/home.png" alt="Blog Post Image" className={styles.image} />
+          <h2 className={styles.postTitle}>Using Payload CMS with NextJS</h2>
+          <p className={styles.postDate}>Published on December 18, 2023</p>
+          <p className={styles.postContent}>
+            Recently, I undertook a project that utilized the powerful
+            combination of Next.js and Payload CMS. The result was a powerful
+            production ready SEO web shop with Stripe payment integration.
+          </p>
+          <Link href="/blog/p2" className={styles.readMoreLink}>
+            Read more
+          </Link>
+        </article>
+        <article className={styles.article}>
           <img
-            src="/serenity2.png"
+            src="/stillroom.png"
             alt="Blog Post Image"
             className={styles.image}
           />

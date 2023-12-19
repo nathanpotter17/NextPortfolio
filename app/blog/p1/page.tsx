@@ -8,7 +8,7 @@ export default function Post1() {
     <div className={styles.container}>
       <div className={styles.main}>
         <img
-          src="/serenity2.png"
+          src="/stillroom.png"
           alt="Blog Post Image"
           className={styles.image}
         />

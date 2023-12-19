@@ -73,8 +73,7 @@
 
 .form {
   display: flex;
-  width: 90%;
-  max-width: 620px;
+  width: fit-content;
   flex-direction: column;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
