@@ -17,7 +17,6 @@ export const sendEmail = async (formData: FormData) => {
   const fname = formData.get("Fname");
   const lname = formData.get("Lname");
   const message = formData.get("message");
-  const state = formData.get("state");
   const projectType = formData.get("projectType") as string;
   const managed = formData.get("managed") as string;
 
@@ -41,11 +40,6 @@ export const sendEmail = async (formData: FormData) => {
   if (!validateString(senderEmail, 60) || !validateEmailFormat(senderEmail)) {
     return {
       error: "Invalid sender email",
-    };
-  }
-  if (!validateString(state, 14)) {
-    return {
-      error: "Invalid State length",
     };
   }
   if (!validateString(message, 200)) {
@@ -77,7 +71,6 @@ export const sendEmail = async (formData: FormData) => {
         fname: fname,
         lname: lname,
         senderEmail: senderEmail,
-        state: state,
         projectType: projectType,
         managed: managed,
         message: message,

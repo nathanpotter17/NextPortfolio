@@ -15,7 +15,6 @@ import {
 type ContactFormEmailProps = {
   fname: string;
   lname: string;
-  state: string;
   message: string;
   senderEmail: string;
   projectType: string;
@@ -26,7 +25,6 @@ export default function ContactFormEmail({
   fname,
   lname,
   senderEmail,
-  state,
   message,
   projectType,
   managed,
@@ -68,9 +66,6 @@ export default function ContactFormEmail({
               <Text>It is part of a property management group.</Text>
             )}
 
-            <Text>
-              {fname} {lname}s address is {state}
-            </Text>
             <Text>
               {fname} {lname}s email is {senderEmail}
             </Text>
