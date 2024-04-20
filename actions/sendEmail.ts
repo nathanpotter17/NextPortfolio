@@ -20,7 +20,7 @@ export const sendEmail = async (formData: FormData) => {
   const projectType = formData.get("projectType") as string;
   const managed = formData.get("managed") as string;
 
-  const requiredFields = ["senderEmail", "Fname", "Lname", "state", "managed"];
+  const requiredFields = ["senderEmail", "Fname", "Lname", "message"];
 
   if (!validateSelectOption(managed)) {
     return {
