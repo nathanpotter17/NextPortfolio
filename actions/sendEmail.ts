@@ -48,7 +48,7 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid State length",
     };
   }
-  if (!validateString(message, 150)) {
+  if (!validateString(message, 200)) {
     return {
       error: "Invalid Message length",
     };
@@ -80,6 +80,7 @@ export const sendEmail = async (formData: FormData) => {
         state: state,
         projectType: projectType,
         managed: managed,
+        message: message,
       }),
     });
   } catch (error: unknown) {

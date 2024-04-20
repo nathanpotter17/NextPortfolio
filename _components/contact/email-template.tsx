@@ -74,7 +74,7 @@ export default function ContactFormEmail({
             <Text>
               {fname} {lname}s email is {senderEmail}
             </Text>
-            <Text>{message}</Text>
+            <Text>Here is their message: {message}</Text>
           </Section>
         </Container>
       </Body>
