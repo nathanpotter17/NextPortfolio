@@ -12,7 +12,7 @@ export default function Post1() {
           className="w-full h-auto rounded-lg mb-2.5"
         />
         <h1 className="text-lg mb-2.5">Using Payload CMS with NextJS</h1>
-        <p className="text-gray-500 mb-5">Published on December 18, 2023</p>
+        <p className="text-gray-500 mb-5">Published on December 18 2023</p>
         <a
           className="underline text-gray-400 hover:text-gray-500"
           href="https://github.com/nathanpotter17/NextE-Com"
@@ -54,7 +54,7 @@ export default function Post1() {
             collections are shaped by their configurations, providing you the
             flexibility to create as many as your application demands. With each
             collection, a new instance is automatically set up in your selected
-            database, aligning with the fields you've defined. Picture
+            database, aligning with the fields you&apos;ve defined. Picture
             collections as conventional database counterparts, each featuring a
             distinct URL, fields, labels, admin settings, and preferences for
             document authentication and uploads. For detailed information, refer
