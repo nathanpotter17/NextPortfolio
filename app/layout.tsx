@@ -1,26 +1,29 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { Inter_Tight } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "react-hot-toast";
+import { Navbar } from "@/_components/home/navbar";
+
+const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NSP Portfolio Page",
-  description: "Nathan Potters Portfolio Page",
+  title: "NSP Studios",
+  description: "CNA",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Analytics />
         <Toaster position="bottom-right" />
       </body>
     </html>

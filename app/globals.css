@@ -1,37 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --bg: #ffffff;
-  --bgSoft: #353535;
-  --text: #000000;
-  --textSoft: #0e6ba8;
+  --bg: #000000;
+  --bg-d: #0f0f0f;
+  --acc1: #003746;
+  --acc2: #386fa4;
+  --acc3: #006885;
+  --acc4: #59a5d8;
+  --acc5: #84d2f6;
+  --glass: #004e6333;
+  --glass2: #004e638a;
+  --td: #000000;
+  --tl: #ffffff;
+  --white20: #ffffff20;
+  --gray: #acacac;
   --gray50: #acacac50;
-
-  --even: #0f0f0f50;
-
-  --bg-dark: #020202;
-  --bg-dark-elements: #1c1d21;
-  --bgSoft-dark: #113347;
-  --text-dark: #ffffff;
+  --dark75: #0d0d0d75;
+  --darkNav: #00000075;
+  --hover1: #0d0d0db9;
+  --white80: #ffffffb9;
+  --c2: #979797;
+  --stop1: #0cedda;
+  --green: #560aef;
+  --bdr: 10px;
+  --grad: linear-gradient(to bottom, var(--glass2), #00000000);
+  --grad2: linear-gradient(to right, var(--stop1), var(--green));
+  --grad3: linear-gradient(to bottom, var(--acc5), var(--acc1), var(--bg));
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+select {
+  width: 100%;
+  min-height: 30px;
+  border-radius: 5px;
+  background-color: var(--tmf);
+  border: none;
+  color: var(--text-color);
+  outline: none;
+  font-size: medium;
+  font-family: inherit;
+  padding: 10px;
+  margin-top: 0.75rem;
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background 0.25s ease-in-out;
+input[type="radio"] {
+  appearance: none;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 24px 0 var(--acc5);
+}
+
+.gradientText {
+  background: var(--grad2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
   scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid var(--gray50);
+  background-color: var(--bg-d);
+  font-family: var(--text2);
+  transition: background-color 0.3s ease-in-out;
 }
 
-button {
-  font-family: inherit;
+.btn2 {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid var(--gray50);
+  border-radius: var(--bdr);
+  background-color: var(--tl);
+  font-family: var(--text2);
+  color: var(--bg);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--tl);
+  color: var(--bg);
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: var(--gray50);
+  cursor: pointer;
+}
+
+* {
+  scrollbar-width: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -40,8 +124,22 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
+  html {
+    color-scheme: dark;
+    background-color: var(--bg);
+    color: var(--tl);
+  }
+}
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+    background-color: var(--bg);
+    color: var(--td);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

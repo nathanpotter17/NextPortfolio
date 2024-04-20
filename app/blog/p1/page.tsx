@@ -1,121 +1,100 @@
 "use client";
 import React from "react";
-import styles from "./p1.module.css";
 import Link from "next/link";
 
 export default function Post1() {
   return (
-    <div className={styles.container}>
-      <div className={styles.main}>
+    <div className="max-w-screen-md mx-auto mt-24 p-5">
+      <article className="text-left">
         <img
-          src="/stillroom.png"
+          src="/home.png"
           alt="Blog Post Image"
-          className={styles.image}
+          className="w-full h-auto rounded-lg mb-2.5"
         />
-        <h1 className={styles.title}>Creating ThreeJS Apps With React</h1>
-        <p className={styles.date}>Published on October 30, 2023</p>
-        <div className={styles.content}>
+        <h1 className="text-lg mb-2.5">Using Payload CMS with NextJS</h1>
+        <p className="text-gray-500 mb-5">Published on December 18, 2023</p>
+        <a
+          className="underline text-gray-400 hover:text-gray-500"
+          href="https://github.com/nathanpotter17/NextE-Com"
+        >
+          My E-Commerce Project
+        </a>
+        <div className="text-base leading-6">
+          <br />
           <p>
-            Building immersive 3D web applications has become easier with the
-            help of Three.js. In this post, we'll focus on the powerful
-            capabilities of React Three Fiber for creating 3D scenes within a
-            React app.
+            In the fast-paced world of e-commerce, creating a seamless and
+            well-structured online shopping experience is crucial. Recently, I
+            undertook a project that aimed to achieve just that, utilizing the
+            powerful combination of Next.js and Payload CMS.
+          </p>
+          <br />
+          <h1 className="text-lg mb-2.5">Why Next?</h1>
+          <p>
+            Next.js continues to gain popularity in the development community,
+            and for good reason. Its server-side rendering, automatic code
+            splitting, and ease of use make it an ideal choice for building
+            high-performance web applications. In the context of e-commerce,
+            these features are invaluable for delivering a fast and responsive
+            user experience.
+          </p>
+          <br />
+          <h1 className="text-lg mb-2.5">Payload Features</h1>
+          <p>
+            Payload CMS serves as the backbone of content management in this
+            project. Its user-friendly interface empowers even non-technical
+            users to manage product listings, update content, and control the
+            overall access structure of the e-commerce site. With Payload,
+            developers can create flexible data models tailored to the specific
+            needs of the platform. This can be found in{" "}
+            <code>/payload/payload.config.ts</code>.
           </p>
           <br />
           <p>
-            Start by setting up your React app and installing the React Three
-            Fiber library, this will default to rendering you app contents at
-            the root, which will need to change to <code>{"<ThreeScene>"}</code>
-            . This approach can be adapted for Typescript.
+            Collections stand out as a vital component in Payload. These
+            collections are shaped by their configurations, providing you the
+            flexibility to create as many as your application demands. With each
+            collection, a new instance is automatically set up in your selected
+            database, aligning with the fields you've defined. Picture
+            collections as conventional database counterparts, each featuring a
+            distinct URL, fields, labels, admin settings, and preferences for
+            document authentication and uploads. For detailed information, refer
+            to <code>/payload/payload-types.ts</code>.
           </p>
           <br />
-          <pre>
-            <code>
-              npx create-react-app my-threejs-app cd my-threejs-app npm install
-              @react-three/fiber@latest
-            </code>
-          </pre>
-          <br />
           <p>
-            Create a new component, <code>ThreeScene.jsx</code>, to contain your
-            3D scene logic using React Three Fiber.
+            Similar to collections, globals are one-off elements, perfect for
+            use in headers, navigations, banners, or footers. Modifying the
+            globals is the easiest way to quickly make your app stand out. Next,
+            redefine the re-usables! Navigate to{" "}
+            <code>./App/_Components/anyComponent</code>, find the component you
+            want to change, and go to index.tsx and index.module.scss to begin
+            component re-creation.
           </p>
           <br />
-          <pre>
-            <code>
-              {`// ThreeScene.jsx
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-import { useState, useRef } from 'react';
-
-function Box(props) {
-  const ref = useRef();
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-
-  useFrame((state, delta) => (ref.current.rotation.x += delta));
-
-  return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => (event.stopPropagation(), hover(true))}
-      onPointerOut={(event) => hover(false)}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh>
-  );
-}
-
-const ThreeScene = () => {
-  return (
-    <Canvas>
-      <ambientLight intensity={Math.PI / 2} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-      <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-      <OrbitControls />
-    </Canvas>
-  );
-};
-
-export default ThreeScene;`}
-            </code>
-          </pre>
-          <br />
+          <h1 className="text-lg mb-2.5">Conclusion</h1>
           <p>
-            To maximize readability, consider using the React Three Fiber
-            approach. If you're concerned striclty about performance, consider
-            plain ThreeJS with React or SolidJS. Understanding how the browser
-            repaints, how React's component tree updates, and how React Three
-            Fiber properties interact with the rendering context is essential
-            for creating high-performing 3D applications. As you design your
-            app, consider scoping essential features as Higher-order Components
-            (HOCs), declaring 're-usables' as Stateless Functional Components,
-            and implementing Pure Components for components that require finer
-            control over re-rendering. Once your components are scoped,
-            customize the styling of your app using CSS, and when ready, use{" "}
-            <code>npm run build</code> to generate the necessary files for
-            deployment on hosting providers like Github Pages.
+            Payload CMS stands as a testament to the capabilities of flexible
+            data models in the realm of e-commerce. The integration of a robust
+            frontend framework with a flexible and user-friendly content
+            management system has resulted in a powerful platform that balances
+            developer control with content management that anyone can
+            understand.
           </p>
         </div>
-      </div>
-      <br />
-      <a
-        style={{ textDecoration: "underline", color: "#acacac50" }}
-        href="https://github.com/pmndrs/react-three-fiber"
-      >
-        Source: React Three Fiber
-      </a>
-      <div className={styles.backButton}>
-        <Link href="/blog">Back to Blog</Link>
-      </div>
-      <footer className={styles.footer}>
-        <p>&copy; 2023 NSP Blog</p>
-      </footer>
+        <br />
+        <a
+          className="underline text-gray-400 hover:text-gray-500"
+          href="https://www.youtube.com/watch?v=3JUsg-WsU9o"
+        >
+          Source: JavaScript Mastery
+        </a>
+        <div className="mt-5 ml-auto p-2.5 max-w-30 rounded-md bg-gray-200 hover:bg-gray-300 transition-transform duration-300 ease-in-out cursor-pointer">
+          <Link href="/blog">Back to Blog</Link>
+        </div>
+        <footer className="text-center mt-10 mb-24 pt-5 border-t border-gray-200">
+          <p className="m-0 text-gray-500 text-sm">&copy; 2023 NSP Blog</p>
+        </footer>
+      </article>
     </div>
   );
 }

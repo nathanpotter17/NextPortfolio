@@ -1,44 +1,90 @@
 import React from "react";
-import styles from "./blog.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Blog: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <article className={styles.article}>
-          <img src="/home.png" alt="Blog Post Image" className={styles.image} />
-          <h2 className={styles.postTitle}>Using Payload CMS with NextJS</h2>
-          <p className={styles.postDate}>Published on December 18, 2023</p>
-          <p className={styles.postContent}>
-            Recently, I undertook a project that utilized the powerful
-            combination of Next.js and Payload CMS. The result was a powerful
-            production ready SEO web shop with Stripe payment integration.
-          </p>
-          <Link href="/blog/p2" className={styles.readMoreLink}>
-            Read more
-          </Link>
-        </article>
-        <article className={styles.article}>
-          <img
-            src="/stillroom.png"
+    <div className="font-InterTight w-full mx-auto max-w-[930px] pt-32">
+      <h1 className="text-5xl font-medium text-center mb-16">NSP Blog</h1>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-[1rem] gap-4">
+        <article className="flex flex-col bg-bgD rounded-md p-6">
+          <Image
+            src="/home.png"
             alt="Blog Post Image"
-            className={styles.image}
+            className="w-full h-auto rounded-lg mb-4"
+            width={512}
+            height={512}
           />
-          <h2 className={styles.postTitle}>Creating ThreeJS Apps with React</h2>
-          <p className={styles.postDate}>Published on October 30, 2023</p>
-          <p className={styles.postContent}>
-            Building immersive 3D web applications has become easier with the
-            integration of React and Three.js. Let's dive into creating a basic
-            Three.js scene within a React app.
+          <h2 className="font-bold text-xl mb-2">
+            Using Payload CMS with NextJS
+          </h2>
+          <p className="text-gray-500 mb-2">Published on December 18, 2023</p>
+          <p className="text-base mb-4 leading-6">
+            In the fast-paced world of e-commerce, creating a seamless and
+            well-structured online shopping experience is crucial.
           </p>
-          <Link href="/blog/p1" className={styles.readMoreLink}>
-            Read more
-          </Link>
+          <div className="mt-auto">
+            <Link
+              href="/blog/p1"
+              className="text-blue-500 font-bold hover:underline"
+            >
+              Read more
+            </Link>
+          </div>
         </article>
-      </main>
-      <footer className={styles.footer}>
-        <p>&copy; 2023 NSP Blog</p>
+        <article className="flex flex-col bg-bgD rounded-md p-6">
+          <Image
+            src="/home.png"
+            alt="Blog Post Image"
+            className="w-full h-auto rounded-lg mb-4"
+            width={512}
+            height={512}
+          />
+          <h2 className="font-bold text-xl mb-2">
+            NSP Studios: Our Formula for Web Success
+          </h2>
+          <p className="text-gray-500 mb-2">Published on December 18, 2023</p>
+          <p className="text-base mb-4 leading-6">
+            In the fast-paced world of e-commerce, creating a seamless and
+            well-structured online shopping experience is crucial.
+          </p>
+          <div className="mt-auto">
+            <Link
+              href="/blog/p1"
+              className="text-blue-500 font-bold hover:underline"
+            >
+              Read more
+            </Link>
+          </div>
+        </article>
+        <article className="flex flex-col bg-bgD rounded-md p-6">
+          <Image
+            src="/home.png"
+            alt="Blog Post Image"
+            className="w-full h-auto rounded-lg mb-4"
+            width={512}
+            height={512}
+          />
+          <h2 className="font-bold text-xl mb-2">
+            Creating 3D Scenes for the Web
+          </h2>
+          <p className="text-gray-500 mb-2">Published on December 18, 2023</p>
+          <p className="text-base mb-4 leading-6">
+            In the fast-paced world of e-commerce, creating a seamless and
+            well-structured online shopping experience is crucial.
+          </p>
+          <div className="mt-auto">
+            <Link
+              href="/blog/p1"
+              className="text-blue-500 font-bold hover:underline"
+            >
+              Read more
+            </Link>
+          </div>
+        </article>
+      </div>
+      <footer className="text-center mt-16 pt-5 border-t border-gray50">
+        <p className="text-gray50 text-sm">&copy; 2024 NSP Blog</p>
       </footer>
     </div>
   );
