@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submitBtn";
 import { toast } from "react-hot-toast";
 
-export default function Contact() {
+interface ContactProps {
+  ptype: string;
+}
+
+export default function Contact({ ptype }: ContactProps) {
   const [hpv, setHPV] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [isManagedVisible, setIsManagedVisible] = useState(true);
@@ -15,7 +19,19 @@ export default function Contact() {
   const [projectType, setSelectedprojectType] = useState("Low or No Code");
   const [managedType, setSelectedManagedType] = useState("No");
 
-  const [plan, setPlan] = useState("Start-Up");
+  const [plan, setPlan] = useState("");
+
+  useEffect(() => {
+    if (ptype === "Start-Up" || ptype === "Pro" || ptype === "Business") {
+      setPlan(ptype);
+      setCurrentPage(2);
+    }
+
+    if (ptype === "P") {
+      setCurrentPage(1);
+      setPlan("Start-Up");
+    }
+  }, []);
 
   const handlePlan = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPlan(event.target.value);
@@ -76,7 +92,7 @@ export default function Contact() {
                 currentPage === 1 ? "opacity-100 pointer-events-auto" : ""
               }`}
             >
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-2xl text-center font-bold mb-4">
                 Which plan suits you best?
               </h2>
               <div className="mb-4">
@@ -106,7 +122,6 @@ export default function Contact() {
                       Start-Up
                     </span>
                   </label>
-
                   <input
                     type="radio"
                     value="Pro"
@@ -165,7 +180,11 @@ export default function Contact() {
                 />
               </div>
               <div className="flex justify-center w-full mt-10">
-                <button type="button" className="btn2" onClick={handleNext}>
+                <button
+                  type="button"
+                  className="btn2 rounded-full"
+                  onClick={handleNext}
+                >
                   Next
                 </button>
               </div>
@@ -177,7 +196,7 @@ export default function Contact() {
               }`}
             >
               <div className="mb-4">
-                <h2 className="text-2xl font-bold mb-6">
+                <h2 className="text-2xl text-center font-bold mb-6">
                   Tell us about your website
                 </h2>
                 <div className="mb-4">
@@ -290,7 +309,7 @@ export default function Contact() {
                     : "max-h-0 opacity-0 invisible"
                 }`}
               >
-                <h3 className="block text-2xl font-bold mb-6">
+                <h3 className="block text-center text-2xl font-bold mb-6">
                   Is it E-Commerce and/or SEO enabled?
                 </h3>
                 <div className="flex flex-row justify-between items-center w-full">
@@ -339,7 +358,11 @@ export default function Contact() {
                 />
               </div>
               <div className="flex justify-center w-full mt-10">
-                <button type="button" className="btn2" onClick={handleNext}>
+                <button
+                  type="button"
+                  className="btn2 rounded-full"
+                  onClick={handleNext}
+                >
                   Next
                 </button>
               </div>
@@ -350,7 +373,7 @@ export default function Contact() {
                 currentPage === 3 ? "opacity-100 pointer-events-auto" : ""
               }`}
             >
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-2xl text-center font-bold mb-4">
                 Let&apos;s get in contact...
               </h2>
               <div className="mb-4">
@@ -422,7 +445,7 @@ export default function Contact() {
         </form>
       )}
       {isSubmitted && (
-        <div className="text-center mt-8 text-td">
+        <div className="text-center mt-8 text-td bg-tl">
           Quote Sent! Expect an email from our team soon.
         </div>
       )}

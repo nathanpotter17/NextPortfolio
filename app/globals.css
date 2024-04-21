@@ -86,7 +86,6 @@ input[type="radio"] {
   font-size: 1rem;
   font-weight: 500;
   border: 2px solid var(--gray50);
-  border-radius: var(--bdr);
   background-color: var(--tl);
   font-family: var(--text2);
   color: var(--bg);

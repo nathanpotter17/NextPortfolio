@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { ContactForm } from "../contact/contactForm";
 
 export const Pricing = () => {
   return (
@@ -54,9 +55,7 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <button className="w-full font-semibold bg-bgD text-tl border-2 border-gray py-3 px-4 rounded-full hover:bg-tl hover:text-td transistion background duration-150 ease-in-out">
-              Sign up now
-            </button>
+            <ContactForm val="btn2 rounded-full w-full" ptype="Start-Up" />
           </div>
         </div>
         <div className="relative m-2 p-8 bg-bgD border-2 border-gray50 rounded-lg text-tl flex flex-col">
@@ -118,9 +117,7 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <button className="w-full font-semibold bg-tl text-td border-2 border-gray py-3 px-4 rounded-full hover:bg-bgD hover:text-tl transistion background duration-150 ease-in-out">
-              Sign up now
-            </button>
+            <ContactForm val="btn rounded-full w-full" ptype="Pro" />
           </div>
         </div>
         <div className="m-2 p-8 bg-tl border-2 border-gray rounded-lg text-td flex flex-col">
@@ -177,9 +174,7 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <button className="w-full font-semibold bg-bgD text-tl border-2 border-gray py-3 px-4 rounded-full hover:bg-tl hover:text-td transistion background duration-150 ease-in-out">
-              Sign up now
-            </button>
+            <ContactForm val="btn2 rounded-full w-full" ptype="Business" />
           </div>
         </div>
       </div>

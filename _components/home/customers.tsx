@@ -16,7 +16,7 @@ export const Customers = () => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-4">
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2 z-10 border-2 border-gray rounded-lg">
+        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2  border-2 border-gray rounded-lg">
           <div className="mt-2 text-lg font-light">
             You have been great to work with, man. I have no complaints at all!
           </div>
@@ -33,7 +33,7 @@ export const Customers = () => {
             <div className="ml-2 text-md font-bold">Jett C | CEO</div>
           </div>
         </div>
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2 z-10 border-2 border-gray rounded-lg">
+        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2  border-2 border-gray rounded-lg">
           <div className="mt-2 text-lg font-light">
             An effective problem solver and someone who is valuable on teams.
           </div>
@@ -50,7 +50,7 @@ export const Customers = () => {
             <div className="ml-2 text-md font-bold">Nathan B | CEO</div>
           </div>
         </div>
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2 z-10 border-2 border-gray rounded-lg">
+        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2  border-2 border-gray rounded-lg">
           <div className="mt-2 text-lg font-light">Incredible co-worker.</div>
           <div className="flex items-center mt-auto pb-2 pt-6">
             <div className="flex items-center">

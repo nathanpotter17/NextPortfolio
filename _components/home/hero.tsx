@@ -11,7 +11,7 @@ export const Hero = () => {
             Delivering Simple & Effective Web Solutions.
           </h1>
           <div>
-            <ContactForm />
+            <ContactForm val="btn rounded-full" ptype="P" />
           </div>
         </div>
       </div>

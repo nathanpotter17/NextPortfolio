@@ -30,7 +30,11 @@ export default function SubmitBtn() {
   }, [pending]);
 
   return (
-    <button type="submit" className="btn2" disabled={isButtonDisabled}>
+    <button
+      type="submit"
+      className="btn2 rounded-full"
+      disabled={isButtonDisabled}
+    >
       {pending ? "Sending..." : "Get Free Estimate"}
     </button>
   );
