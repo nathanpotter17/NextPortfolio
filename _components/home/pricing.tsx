@@ -55,7 +55,11 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <ContactForm val="btn2 rounded-full w-full" ptype="Start-Up" />
+            <ContactForm
+              val="btn2 rounded-full w-full"
+              ptype="Start-Up"
+              text="Get Started Today"
+            />
           </div>
         </div>
         <div className="relative m-2 p-8 bg-bgD border-2 border-gray50 rounded-lg text-tl flex flex-col">
@@ -117,7 +121,11 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <ContactForm val="btn rounded-full w-full" ptype="Pro" />
+            <ContactForm
+              val="btn rounded-full w-full"
+              ptype="Pro"
+              text="Get Started Today"
+            />
           </div>
         </div>
         <div className="m-2 p-8 bg-tl border-2 border-gray rounded-lg text-td flex flex-col">
@@ -174,7 +182,11 @@ export const Pricing = () => {
             </div>
           </div>
           <div className="flex justify-center mt-auto pt-[2rem]">
-            <ContactForm val="btn2 rounded-full w-full" ptype="Business" />
+            <ContactForm
+              val="btn2 rounded-full w-full"
+              ptype="Business"
+              text="Get Started Today"
+            />
           </div>
         </div>
       </div>

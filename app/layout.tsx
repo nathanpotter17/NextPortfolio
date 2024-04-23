@@ -10,7 +10,7 @@ const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NSP Studios",
-  description: "CNA",
+  description: "NSP Studios: Delivering Simple & Effective Web Solutions",
 };
 
 export default function RootLayout({

@@ -4,7 +4,15 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import Contact from "./contact";
 
-export const ContactForm = ({ val, ptype }: { val: string; ptype: string }) => {
+export const ContactForm = ({
+  val,
+  ptype,
+  text,
+}: {
+  val: string;
+  ptype: string;
+  text: string;
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -18,7 +26,7 @@ export const ContactForm = ({ val, ptype }: { val: string; ptype: string }) => {
         aria-label="Free Quote"
         onClick={toggleModal}
       >
-        Free Quote
+        {text}
       </button>
       {showModal && (
         <div className="fixed inset-0 bg-gray-800 z-10 flex items-center justify-center">
