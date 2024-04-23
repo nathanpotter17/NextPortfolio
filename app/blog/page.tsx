@@ -46,7 +46,7 @@ const Blog: React.FC = () => {
           <p className="text-gray-500 mb-2">Published on December 18, 2023</p>
           <p className="text-base mb-4 leading-6">
             Using Blender3D and the @react-three ecosystem, I walk through how I
-            built a 90's Nostalgia Room filled with all my favorites.
+            built a 90&apos;s Nostalgia Room filled with all my favorites.
           </p>
           <div className="mt-auto">
             <Link

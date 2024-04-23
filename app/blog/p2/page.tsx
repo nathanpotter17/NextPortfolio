@@ -18,14 +18,15 @@ export default function Post1() {
         </h1>
         <p className="text-gray-500 mb-5">Published on April 22, 2024</p>
         <p>
-          In the digital age, your website is not just a brochure; it's a
-          gateway to your brand's story, a tool for engagement, and a platform
-          for growth. At NSP.dev Web Services, we understand the importance of a
-          seamless, user-friendly online experience. Our dedicated objective is
-          to transform the ordinary browsing experience into an unparalleled,
-          seamless journey. We ensure users can effortlessly navigate and
-          extract maximum value from the content, or be flowed into secure pages
-          or areas where conversion happens, thus improving your brand's CTR.
+          In the digital age, your website is not just a brochure; it&apos;s a
+          gateway to your brand&apos;s story, a tool for engagement, and a
+          platform for growth. At NSP.dev Web Services, we understand the
+          importance of a seamless, user-friendly online experience. Our
+          dedicated objective is to transform the ordinary browsing experience
+          into an unparalleled, seamless journey. We ensure users can
+          effortlessly navigate and extract maximum value from the content, or
+          be flowed into secure pages or areas where conversion happens, thus
+          improving your brand&apos;s CTR.
         </p>
 
         <div className="text-base leading-6">
