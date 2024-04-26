@@ -156,7 +156,7 @@ export default function Post1() {
               Competitive Advantage: A professional and high-performing website
               sets your business apart from competitors. Visitors are more
               likely to stay on your site and explore different sections when
-              they don't have to wait for content to load.
+              they don&apos;t have to wait for content to load.
             </li>
             <li className="pt-2">
               Improved Accessibility: An accessible website ensures that
