@@ -18,7 +18,7 @@ export const Customers = () => {
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col bg-bgD text-white p-4 max-w-xs mx-2  border-2 border-gray rounded-lg">
           <div className="mt-2 text-lg font-light">
-            You have been great to work with, man. I have no complaints at all!
+            You have been great to work with - I have no complaints at all!
           </div>
           <div className="flex items-center mt-auto pb-2 pt-6">
             <div className="flex items-center">

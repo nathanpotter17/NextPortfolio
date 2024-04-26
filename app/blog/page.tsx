@@ -11,9 +11,9 @@ const Blog: React.FC = () => {
           <Image
             src="/p2.png"
             alt="Blog Post Image"
-            className="w-full h-auto rounded-lg mb-4"
-            width={512}
-            height={512}
+            className="w-auto min-h-[150px] max-h-[150px] rounded-lg mb-4"
+            width={250}
+            height={150}
           />
           <h2 className="font-bold text-xl mb-2">
             NSP Studios: Our Formula for Web Success
@@ -36,17 +36,18 @@ const Blog: React.FC = () => {
           <Image
             src="/home.png"
             alt="Blog Post Image"
-            className="w-full h-auto rounded-lg mb-4"
-            width={512}
-            height={512}
+            className="w-auto min-h-[150px] max-h-[150px] rounded-lg mb-4"
+            width={250}
+            height={150}
           />
           <h2 className="font-bold text-xl mb-2">
             Creating 3D Scenes for the Web
           </h2>
           <p className="text-gray-500 mb-2">Published on December 18, 2023</p>
           <p className="text-base mb-4 leading-6">
-            Using Blender3D and the @react-three ecosystem, I walk through how I
-            built a 90&apos;s Nostalgia Room filled with all my favorites.
+            Using Blender3D and the @react-three ecosystems, I walk through how
+            I built a 90&apos;s Nostalgia Room filled with all my favorite
+            props.
           </p>
           <div className="mt-auto">
             <Link
@@ -61,9 +62,9 @@ const Blog: React.FC = () => {
           <Image
             src="/home.png"
             alt="Blog Post Image"
-            className="w-full h-auto rounded-lg mb-4"
-            width={512}
-            height={512}
+            className="w-auto min-h-[150px] max-h-[150px] rounded-lg mb-4"
+            width={250}
+            height={150}
           />
           <h2 className="font-bold text-xl mb-2">
             Using Payload CMS with NextJS

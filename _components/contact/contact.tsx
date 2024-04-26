@@ -179,7 +179,7 @@ export default function Contact({ ptype }: ContactProps) {
                   defaultValue={plan}
                 />
               </div>
-              <div className="flex justify-center w-full mt-10">
+              <div className="flex justify-center w-full mt-10 ml-1.5">
                 <button
                   type="button"
                   className="btn2 rounded-full"
@@ -309,10 +309,10 @@ export default function Contact({ ptype }: ContactProps) {
                     : "max-h-0 opacity-0 invisible"
                 }`}
               >
-                <h3 className="block text-center text-2xl font-bold mb-6">
+                <h2 className="text-center text-2xl font-bold mb-6">
                   Is it E-Commerce and/or SEO enabled?
-                </h3>
-                <div className="flex flex-row justify-between items-center w-full">
+                </h2>
+                <div className="m-auto flex flex-row gap-x-2 justify-center items-center w-auto max-w-[180px]">
                   <input
                     type="radio"
                     value="Yes"

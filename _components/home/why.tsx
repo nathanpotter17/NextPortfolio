@@ -26,7 +26,7 @@ export const Why = () => {
           </p>
           <div className="flex items-center pt-4 text-gray transition-colors duration-150 group hover:cursor-pointer">
             <Link
-              href="/blog/p1"
+              href="/blog/p2"
               className="text-md text-gray pr-2 transition-colors duration-150 group-hover:text-tl"
             >
               Read more
@@ -45,7 +45,7 @@ export const Why = () => {
           </p>
           <div className="flex items-center pt-4 text-gray transition-colors duration-150 group hover:cursor-pointer">
             <Link
-              href="/blog/p1"
+              href="/blog/p2"
               className="text-md text-gray pr-2 transition-colors duration-150 group-hover:text-tl"
             >
               Read more
@@ -64,7 +64,7 @@ export const Why = () => {
           </p>
           <div className="flex items-center pt-4 text-gray transition-colors duration-150 group hover:cursor-pointer">
             <Link
-              href="/blog/p1"
+              href="/blog/p2"
               className="text-md text-gray pr-2 transition-colors duration-150 group-hover:text-tl"
             >
               Read more

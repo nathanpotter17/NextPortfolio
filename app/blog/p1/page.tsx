@@ -4,15 +4,19 @@ import Link from "next/link";
 
 export default function Post1() {
   return (
-    <div className="max-w-screen-md mx-auto mt-24 p-5">
-      <article className="text-left">
-        <img
-          src="/home.png"
-          alt="Blog Post Image"
-          className="w-full h-auto rounded-lg mb-2.5"
-        />
-        <h1 className="text-lg mb-2.5">Using Payload CMS with NextJS</h1>
-        <p className="text-gray-500 mb-5">Published on December 18, 2023</p>
+    <article className="max-w-screen-md mx-auto mt-16 p-5">
+      <div className="text-left text-lg">
+        <br></br>
+        <h1 className="text-5xl font-bold mb-2.5 mt-3">
+          Using Payload CMS with NextJS
+        </h1>
+        <p className="text-white font-medium text-lg text-md mt-5">
+          Nathan Potter
+        </p>
+        <p className="text-acc4 mb-5 text-md">
+          &#35;Experience, &#35;Full-Stack &middot; 3 min read &middot; December
+          18, 2023
+        </p>
         <a
           className="underline text-gray-400 hover:text-gray-500"
           href="https://github.com/nathanpotter17/NextE-Com"
@@ -88,13 +92,13 @@ export default function Post1() {
         >
           Source: JavaScript Mastery
         </a>
-        <div className="mt-5 ml-auto p-2.5 max-w-30 rounded-md bg-gray-200 hover:bg-gray-300 transition-transform duration-300 ease-in-out cursor-pointer">
+        <div className="btn cursor-pointer">
           <Link href="/blog">Back to Blog</Link>
         </div>
         <footer className="text-center mt-10 mb-24 pt-5 border-t border-gray-200">
           <p className="m-0 text-gray-500 text-sm">&copy; 2023 NSP Blog</p>
         </footer>
-      </article>
-    </div>
+      </div>
+    </article>
   );
 }

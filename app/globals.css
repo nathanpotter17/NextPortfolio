@@ -71,6 +71,26 @@ input[type="radio"] {
   scrollbar-width: none;
 }
 
+@keyframes bg-full {
+  0% {
+    background-size: 0 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.bg-full {
+  background-image: linear-gradient(to right, white, white);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  animation: bg-full 0.5s ease-in-out;
+}
+
+.bg-full:hover {
+  animation-direction: reverse;
+}
+
 .btn {
   padding: 12px 24px;
   font-size: 1rem;
