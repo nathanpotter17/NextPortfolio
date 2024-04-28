@@ -28,7 +28,6 @@ export default function Post1() {
           or areas where conversion happens, thus improving your brand&apos;s
           CTR.
         </p>
-
         <div className="text-lg leading-6">
           <h1 className="text-4xl font-medium mb-2.5 mt-3">Web Applications</h1>
           <p>
@@ -55,11 +54,12 @@ export default function Post1() {
             completed. We prioritize seamless interaction across all devices.
           </p>
           <h1 className="text-4xl font-medium mb-2.5 mt-3">
-            The Average WP or Site-Builder Website
+            Your Average Site-Builder Website
           </h1>
           <p>
-            Consider a website with ~ 6 pages & form functionality. Our last
-            project&apos;s page scores according to Lighthouse:
+            Consider your average Wordpress, Godaddy, Wix, or similar website
+            with ~ 6 pages & form functionality. Our last project&apos;s page
+            scores according to Lighthouse:
           </p>
           <br></br>
           <Image
@@ -79,8 +79,8 @@ export default function Post1() {
           />
           <br></br>
           <p>
-            For reference, this performance rivals X.com, the #1 ranked site for
-            performance this year.
+            For reference, this performance matches some of the top ranked sites
+            for this year.
           </p>
           <a
             className="text-blue-500"

@@ -92,7 +92,7 @@ export default function Contact({ ptype }: ContactProps) {
                 currentPage === 1 ? "opacity-100 pointer-events-auto" : ""
               }`}
             >
-              <h2 className="text-2xl text-center font-bold mb-4">
+              <h2 className="text-2xl text-center font-bold mb-4 ml-2.5">
                 Which plan suits you best?
               </h2>
               <div className="mb-4">
@@ -200,7 +200,7 @@ export default function Contact({ ptype }: ContactProps) {
                   Tell us about your website
                 </h2>
                 <div className="mb-4">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 w-[95%]">
                     <input
                       type="radio"
                       value="Low or No Code"
@@ -312,7 +312,7 @@ export default function Contact({ ptype }: ContactProps) {
                 <h2 className="text-center text-2xl font-bold mb-6">
                   Is it E-Commerce and/or SEO enabled?
                 </h2>
-                <div className="m-auto flex flex-row gap-x-2 justify-center items-center w-auto max-w-[180px]">
+                <div className="m-auto w-auto flex flex-row justify-start items-center max-w-[180px]">
                   <input
                     type="radio"
                     value="Yes"
@@ -330,6 +330,7 @@ export default function Contact({ ptype }: ContactProps) {
                   >
                     <span>Yes</span>
                   </label>
+                  <div className="m-2"></div>
                   <input
                     type="radio"
                     value="No"
