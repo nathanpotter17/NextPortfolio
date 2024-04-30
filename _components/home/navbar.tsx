@@ -21,7 +21,7 @@ export const Navbar = () => {
   return (
     <nav
       aria-label="navigation"
-      className="flex w-full fixed justify-between items-center pt-4 pl-4 pb-4 bg-darkNav"
+      className="flex w-full fixed justify-between items-center pt-4 pl-4 pb-4 bg-darkNav z-10"
     >
       <Link href="/">
         <Image src="/L1-d.svg" alt="logo" width={80} height={50} />

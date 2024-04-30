@@ -24,25 +24,25 @@ export const Product = () => {
           effectiveness.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-[940px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[940px]">
         {[...Array(6)].map((_, index) => (
           <div
             key={index}
-            className="m-2 p-8 border-2 border-gray50 rounded-lg text-center bg-bgD"
+            className="m-2 p-6 max-w-[300px] border-2 border-gray50 rounded-lg text-center bg-bgD"
           >
             <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-gray50">
               {index === 0 ? (
-                <Sparkles color="white" size={20} />
+                <Sparkles color="skyblue" fill="skyblue" size={20} />
               ) : index === 1 ? (
-                <Watch color="white" size={20} />
+                <Watch color="skyblue" size={20} />
               ) : index === 2 ? (
-                <Server color="white" size={20} />
+                <Server color="skyblue" size={20} />
               ) : index === 3 ? (
-                <Hand color="white" size={20} />
+                <Hand color="skyblue" size={20} />
               ) : index === 4 ? (
-                <UserRound color="white" size={20} />
+                <UserRound color="skyblue" size={20} />
               ) : (
-                <Lock color="white" size={20} />
+                <Lock color="skyblue" size={20} />
               )}
             </div>
             <h3 className="text-lg font-medium py-2">

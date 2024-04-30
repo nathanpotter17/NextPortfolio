@@ -17,7 +17,7 @@ export const Why = () => {
           day one.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-w-[940px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[940px]">
         <div className="m-2 p-4 max-w-[300px] bg-bgD border-2 border-gray50 rounded-lg">
           <h2 className="font-medium pb-2 text-3xl text-tl">UX First.</h2>
           <p className="leading-[1.35rem] text-base font-light text-tl">

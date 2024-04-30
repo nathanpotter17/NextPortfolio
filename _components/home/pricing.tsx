@@ -15,7 +15,7 @@ export const Pricing = () => {
           Only pay for what you need, and upgrade at any time.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2">
         {/* Card 1 */}
         <div className="m-2 p-8 bg-tl border-2 border-gray rounded-lg text-td flex flex-col">
           <h3 className="text-lg font-medium">Start-Up</h3>
