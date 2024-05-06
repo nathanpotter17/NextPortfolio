@@ -60,7 +60,7 @@ export default function Post1() {
             Consider your average Wordpress, Godaddy, Wix, or similar website
             with ~ 6 pages & form functionality. Their scores usually look
             similar to the below, with no way to control it from within their
-            site builder. This was our last client's before score:
+            site builder. This was our last clients before score:
           </p>
           <br></br>
           <Image
