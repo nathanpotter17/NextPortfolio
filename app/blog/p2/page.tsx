@@ -5,8 +5,8 @@ import { ContactForm } from "@/_components/contact/contactForm";
 
 export default function Post1() {
   return (
-    <article className="max-w-screen-md mx-auto mt-16 p-5">
-      <div className="text-left text-lg">
+    <article className="max-w-screen-md mx-auto mt-10">
+      <div className="text-left text-lg  p-5">
         <br></br>
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
           Elevate Your Online Presence with NSP Studios
@@ -58,8 +58,9 @@ export default function Post1() {
           </h1>
           <p>
             Consider your average Wordpress, Godaddy, Wix, or similar website
-            with ~ 6 pages & form functionality. Our last project&apos;s page
-            scores according to Lighthouse:
+            with ~ 6 pages & form functionality. Their scores usually look
+            similar to the below, with no way to control it from within their
+            site builder. This was our last client's before score:
           </p>
           <br></br>
           <Image
@@ -70,6 +71,7 @@ export default function Post1() {
             className="w-full h-auto"
           />
           <br></br>
+          <p>Here is their score after seeking the help of NSP Studios:</p>
           <Image
             src="/fast.png"
             width={420}

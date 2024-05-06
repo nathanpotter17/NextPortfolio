@@ -9,7 +9,7 @@ import { Navbar } from "@/_components/home/navbar";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nathanpotter.tech"),
+  metadataBase: new URL("https://nathanpotter.tech"),
   keywords: [
     "nathan potter",
     "nsp",
@@ -57,8 +57,10 @@ export const metadata: Metadata = {
     default: "NSP Studios",
     template: "%s | NSP Studios",
   },
+  description:
+    "Discover how NSP Studios can help you create custom web experiences.",
   openGraph: {
-    determiner: "the",
+    determiner: "auto",
     title: "NSP Studios: Delivering Simple & Effective Web Solutions",
     description:
       "Discover how NSP Studios can help you create custom web experiences.",
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
         alt: "NSP Studios Logo",
       },
     ],
-    url: "https://www.nathanpotter.tech",
+    url: "https://nathanpotter.tech",
     siteName: "NSP Studios",
     locale: "en_US",
     type: "website",

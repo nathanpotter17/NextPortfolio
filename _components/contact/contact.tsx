@@ -450,10 +450,10 @@ export default function Contact({ ptype }: ContactProps) {
           Quote Sent! Expect an email from our team soon.
         </div>
       )}
-      <div className="absolute bottom-6 text-center w-full text-td text-sm">
+      <div className="absolute bottom-4 text-center w-full text-td text-xs">
         By submitting this form you opt-in for email messages and may opt-out at
         any time.
-        <div className="mb-2" />
+        <div className="mb-1" />
         <a href="/" className="text-blue-500 hover:text-blue-700 mr-2">
           Privacy Policy
         </a>

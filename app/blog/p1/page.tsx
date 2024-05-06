@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Post1() {
   return (
-    <article className="max-w-screen-md mx-auto mt-16 p-5">
-      <div className="text-left text-lg">
+    <article className="max-w-screen-md mx-auto mt-10">
+      <div className="text-left text-lg p-5">
         <br></br>
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
           Using Payload CMS with NextJS
@@ -32,7 +32,7 @@ export default function Post1() {
             powerful combination of Next.js and Payload CMS.
           </p>
           <br />
-          <h1 className="text-lg mb-2.5">Why Next?</h1>
+          <h1 className="text-4xl font-medium mb-2.5 mt-3">Why NextJS?</h1>
           <p>
             Next.js continues to gain popularity in the development community,
             and for good reason. Its server-side rendering, automatic code
@@ -42,7 +42,7 @@ export default function Post1() {
             user experience.
           </p>
           <br />
-          <h1 className="text-lg mb-2.5">Payload Features</h1>
+          <h1 className="text-4xl font-medium mb-2.5 mt-3">Payload Features</h1>
           <p>
             Payload CMS serves as the backbone of content management in this
             project. Its user-friendly interface empowers even non-technical

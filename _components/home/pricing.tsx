@@ -8,10 +8,10 @@ export const Pricing = () => {
         <p className="text-sm px-2 text-gray-500">Pricing Options</p>
       </div>
       <div className="text-center">
-        <h1 className="font-bold text-center leading-[70px] tracking-tight pt-4 pb-4 text-6xl text-tl">
+        <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Pricing Options for all SMBs
         </h1>
-        <p className="text-center pb-8 text-lg text-tl">
+        <p className="text-center pb-8 p-2 text-lg text-tl">
           Only pay for what you need, and upgrade at any time.
         </p>
       </div>
@@ -190,7 +190,7 @@ export const Pricing = () => {
           </div>
         </div>
       </div>
-      <p className="text-gray py-4">
+      <p className="text-center text-gray p-4">
         $20 Email & Pages Overage Fee, $50 Storage Overage Fee
       </p>
     </section>

@@ -15,34 +15,34 @@ export const Product = () => {
         <p className="text-sm px-2 text-gray-500">Our Product</p>
       </div>
       <div className="text-center">
-        <h1 className="font-bold text-center leading-[70px] tracking-tight pt-4 pb-4 text-6xl text-tl">
+        <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Everything you need
         </h1>
-        <p className="text-center max-w-[512px] pb-8 text-lg text-tl">
+        <p className="text-center max-w-[512px] p-2 pb-8 text-lg text-tl">
           Enjoy our hyper-optimized methodology that takes digital design,
           marketing, SEO and other strategies to their very core, streamlining
           effectiveness.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[940px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-[940px]">
         {[...Array(6)].map((_, index) => (
           <div
             key={index}
             className="m-2 p-6 max-w-[300px] border-2 border-gray50 rounded-lg text-center bg-bgD"
           >
-            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-gray50">
+            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-tl">
               {index === 0 ? (
-                <Sparkles color="skyblue" fill="skyblue" size={20} />
+                <Sparkles color="black" fill="black" size={20} />
               ) : index === 1 ? (
-                <Watch color="skyblue" size={20} />
+                <Watch color="black" size={20} />
               ) : index === 2 ? (
-                <Server color="skyblue" size={20} />
+                <Server color="black" size={20} />
               ) : index === 3 ? (
-                <Hand color="skyblue" size={20} />
+                <Hand color="black" size={20} />
               ) : index === 4 ? (
-                <UserRound color="skyblue" size={20} />
+                <UserRound color="black" size={20} />
               ) : (
-                <Lock color="skyblue" size={20} />
+                <Lock color="black" size={20} />
               )}
             </div>
             <h3 className="text-lg font-medium py-2">

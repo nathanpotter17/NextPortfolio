@@ -8,16 +8,16 @@ export const Why = () => {
         <p className="text-sm px-2 text-gray-500">Our Formula</p>
       </div>
       <div className="text-center">
-        <h1 className="font-bold text-center leading-[70px] tracking-tight pt-4 pb-4 text-6xl text-tl">
+        <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Why Us
         </h1>
-        <p className="text-center max-w-[512px] pb-8 text-lg text-tl">
+        <p className="text-center m-2 max-w-[512px] pb-8 text-lg text-tl">
           Performance is often impacted on low or no-code sites, and our
           hyper-optimized web solutions come with flexible infrastructure from
           day one.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[940px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-[940px]">
         <div className="m-2 p-4 max-w-[300px] bg-bgD border-2 border-gray50 rounded-lg">
           <h2 className="font-medium pb-2 text-3xl text-tl">UX First.</h2>
           <p className="leading-[1.35rem] text-base font-light text-tl">
