@@ -1,4 +1,5 @@
 import { Customers } from "@/_components/home/customers";
+import { Footer } from "@/_components/home/footer";
 import { Hero } from "@/_components/home/hero";
 import { Navbar } from "@/_components/home/navbar";
 import { Pricing } from "@/_components/home/pricing";
@@ -13,6 +14,7 @@ export default function Home() {
       <Product />
       <Pricing />
       <Customers />
+      <Footer />
     </main>
   );
 }

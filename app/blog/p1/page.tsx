@@ -92,9 +92,12 @@ export default function Post1() {
         >
           Source: JavaScript Mastery
         </a>
-        <div className="btn cursor-pointer">
-          <Link href="/blog">Back to Blog</Link>
-        </div>
+        <Link
+          className="btn2 hover:bg-gray rounded-full cursor-pointer"
+          href="/blog"
+        >
+          Back to Blog
+        </Link>
         <footer className="text-center mt-10 mb-24 pt-5 border-t border-gray-200">
           <p className="m-0 text-gray-500 text-sm">&copy; 2023 NSP Blog</p>
         </footer>

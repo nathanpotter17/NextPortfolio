@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSpring, animated } from "@react-spring/web";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,6 +17,36 @@ export const Navbar = () => {
       : "rotate(0deg)",
     config: { tension: 200, friction: 20 },
   });
+
+  useEffect(() => {
+    const handleTouchStart = (event: TouchEvent) => {
+      // Type guard for TouchEvent
+      if ("touches" in event) {
+        console.log(event.touches);
+      }
+
+      // Type guard for MouseEvent
+      if ("screenX" in event) {
+        console.log(event.screenX);
+      }
+
+      // Check if the touch event target is outside the menu and that the menu is open
+      if (
+        isClicked &&
+        event.currentTarget instanceof Element &&
+        !event.currentTarget.closest("#dropdown")
+      ) {
+        setIsClicked(false);
+      }
+    };
+
+    document.addEventListener("touchstart", handleTouchStart);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      document.removeEventListener("touchstart", handleTouchStart);
+    };
+  }, [isClicked]);
 
   return (
     <nav
@@ -41,6 +71,7 @@ export const Navbar = () => {
           className={`absolute top-8 right-0 mt-2 w-32 bg-white20 rounded-md text-white ${
             isClicked ? "opacity-100 visible bg-gray" : "opacity-0 invisible"
           }`}
+          id="dorpdown"
           onMouseLeave={() => setIsClicked(false)}
         >
           <div className="flex flex-col p-2 space-y-2">

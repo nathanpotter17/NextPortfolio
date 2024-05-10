@@ -16,7 +16,7 @@ export const Customers = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 space-y-4">
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray rounded-lg flex-grow">
+        <div className="flex flex-col bg-bgD text-white lg:mt-4 p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray rounded-lg flex-grow">
           <div className="flex-grow flex flex-col justify-between">
             <div className="mt-2 text-lg font-light">
               You have been great to work with - I have no complaints at all!
