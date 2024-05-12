@@ -18,36 +18,6 @@ export const Navbar = () => {
     config: { tension: 200, friction: 20 },
   });
 
-  useEffect(() => {
-    const handleTouchStart = (event: TouchEvent) => {
-      // Type guard for TouchEvent
-      if ("touches" in event) {
-        console.log(event.touches);
-      }
-
-      // Type guard for MouseEvent
-      if ("screenX" in event) {
-        console.log(event.screenX);
-      }
-
-      // Check if the touch event target is outside the menu and that the menu is open
-      if (
-        isClicked &&
-        event.currentTarget instanceof Element &&
-        !event.currentTarget.closest("#dropdown")
-      ) {
-        setIsClicked(false);
-      }
-    };
-
-    document.addEventListener("touchstart", handleTouchStart);
-
-    // Cleanup function to remove the event listener
-    return () => {
-      document.removeEventListener("touchstart", handleTouchStart);
-    };
-  }, [isClicked]);
-
   return (
     <nav
       aria-label="navigation"

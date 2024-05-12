@@ -8,7 +8,7 @@ export const Pricing = () => {
         <p className="text-sm px-2 text-gray-500">Pricing Options</p>
       </div>
       <div className="text-center">
-        <h1 className="text-[3rem] md:text-7xl max-w-[320px] mx-auto text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
+        <h1 className="text-[3rem] lg:text-7xl sm:max-w-[320px] md:max-w-[512px] lg:max-w-[720px] mx-4 text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Pricing Options for all SMBs
         </h1>
         <p className="text-center pb-8 p-2 text-lg text-tl">
@@ -92,7 +92,10 @@ export const Pricing = () => {
               <Check width={16} height={16} />
               <span className="ml-2">
                 Choose from Zapier, Stripe, and{" "}
-                <a className="underline hover:cursor-pointer">more</a>.
+                <a href="/blog/p2" className="underline hover:cursor-pointer">
+                  more
+                </a>
+                .
               </span>
             </div>
             <div className="flex items-center">
