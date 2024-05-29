@@ -58,12 +58,12 @@ export default function ContactFormEmail({
             </Heading>
             <Hr />
             <Text>
-              {fname} {lname}s home is an {projectType}.
+              {fname} {lname}s needs a website that is {projectType}.
             </Text>
             {managed == "No" ? (
-              <Text>It is not part of a property management group.</Text>
+              <Text>It is not SEO / E Commerce enabled.</Text>
             ) : (
-              <Text>It is part of a property management group.</Text>
+              <Text>It is SEO / E Commerce enabled.</Text>
             )}
 
             <Text>
