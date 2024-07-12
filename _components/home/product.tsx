@@ -18,7 +18,7 @@ export const Product = () => {
         <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Everything you need
         </h1>
-        <p className="text-center max-w-[512px] p-2 pb-8 text-lg text-tl">
+        <p className="text-center max-w-[512px] mx-auto p-2 pb-8 text-lg text-tl">
           Enjoy our hyper-optimized methodology that takes digital design,
           marketing, SEO and other strategies to their very core, streamlining
           effectiveness.
