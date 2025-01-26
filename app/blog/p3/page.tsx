@@ -29,8 +29,8 @@ export default function Post3() {
           </p>
           <br></br>
           <p>
-            Follow the link below if you're eager to dive into my repository for
-            all things Web Assembly.
+            Follow the link below if you&apos;re eager to dive into my
+            repository for all things Web Assembly.
           </p>
           <a
             className="underline text-acc4"
