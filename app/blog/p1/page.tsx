@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import Link from 'next/link';
 
 export default function Post1() {
   return (
@@ -15,13 +15,13 @@ export default function Post1() {
         </p>
         <p className="text-acc4 mb-5 text-md">
           &#35;Experience, &#35;Full-Stack &middot; 3 min read &middot; December
-          18, 2023
+          18, 2025
         </p>
         <a
-          className="underline text-gray-400 hover:text-gray-500"
+          className="underline text-acc4"
           href="https://github.com/nathanpotter17/NextE-Com"
         >
-          My E-Commerce Project
+          E-Commerce Shop Example
         </a>
         <div className="text-base leading-6">
           <br />
@@ -49,7 +49,7 @@ export default function Post1() {
             users to manage product listings, update content, and control the
             overall access structure of the e-commerce site. With Payload,
             developers can create flexible data models tailored to the specific
-            needs of the platform. This can be found in{" "}
+            needs of the platform. This can be found in{' '}
             <code>/payload/payload.config.ts</code>.
           </p>
           <br />
@@ -69,7 +69,7 @@ export default function Post1() {
             Similar to collections, globals are one-off elements, perfect for
             use in headers, navigations, banners, or footers. Modifying the
             globals is the easiest way to quickly make your app stand out. Next,
-            redefine the re-usables! Navigate to{" "}
+            redefine the re-usables! Navigate to{' '}
             <code>./App/_Components/anyComponent</code>, find the component you
             want to change, and go to index.tsx and index.module.scss to begin
             component re-creation.
@@ -87,11 +87,12 @@ export default function Post1() {
         </div>
         <br />
         <a
-          className="underline text-gray-400 hover:text-gray-500"
+          className="underline text-acc4"
           href="https://www.youtube.com/watch?v=3JUsg-WsU9o"
         >
           Source: JavaScript Mastery
         </a>
+        <div className="my-8" />
         <Link
           className="btn2 hover:bg-gray rounded-full cursor-pointer"
           href="/blog"
@@ -99,7 +100,7 @@ export default function Post1() {
           Back to Blog
         </Link>
         <footer className="text-center mt-10 mb-24 pt-5 border-t border-gray-200">
-          <p className="m-0 text-gray-500 text-sm">&copy; 2023 NSP Blog</p>
+          <p className="m-0 text-gray-500 text-sm">&copy; 2025 NSP Blog</p>
         </footer>
       </div>
     </article>

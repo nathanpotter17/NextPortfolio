@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ContactForm } from "@/_components/contact/contactForm";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ContactForm } from '@/_components/contact/contactForm';
 
 export default function Post1() {
   return (
@@ -9,7 +9,7 @@ export default function Post1() {
       <div className="text-left text-lg  p-5">
         <br></br>
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
-          Elevate Your Online Presence with NSP Studios
+          Client Success Stories: My Marketing Fitness
         </h1>
         <p className="text-white font-medium text-lg text-md mt-5">
           Nathan Potter
@@ -46,14 +46,6 @@ export default function Post1() {
             improve conversions.
           </p>
           <h1 className="text-4xl font-medium mb-2.5 mt-3">
-            Mobile Applications
-          </h1>
-          <p>
-            Our mobile application design combines user-centric workflows with
-            high-quality form & function, engaging the user as each process is
-            completed. We prioritize seamless interaction across all devices.
-          </p>
-          <h1 className="text-4xl font-medium mb-2.5 mt-3">
             Your Average Site-Builder Website
           </h1>
           <p>
@@ -85,14 +77,14 @@ export default function Post1() {
             for this year.
           </p>
           <a
-            className="text-blue-500"
+            className="underline text-acc4"
             href="https://www.tooltester.com/en/blog/website-loading-time-statistics/#Analyzing_The_Worlds_Top_100_Websites"
           >
-            (tooltester)
+            Source: ToolTester
           </a>
           <br></br>
           <h1 className="text-4xl font-medium mb-2.5 mt-3">
-            I aim to improve your page by:
+            Typically, I aim to improve your page by:
           </h1>
           <ul className="list-disc p-5">
             <li>
@@ -128,10 +120,10 @@ export default function Post1() {
             </li>
           </ul>
           <p>
-            All of these in consideration should result, depending on how media
-            content is hosted, a considerable page speed-up and guaranteed
-            accessibility, best practices, and SEO score of 90. Oh, and peace of
-            mind that your site is secure.
+            All of these in consideration should result in a considerable page
+            speed-up and guaranteed accessibility, best practices, and SEO score
+            of 90. Also, the peace of mind that your site is secure, and well
+            taken care of.
           </p>
           <h1 className="text-4xl font-medium mb-2.5 mt-5">
             Why does this matter?
