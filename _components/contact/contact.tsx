@@ -1,35 +1,35 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submitBtn";
-import { toast } from "react-hot-toast";
+import React, { useEffect, useState } from 'react';
+import { sendEmail } from '@/actions/sendEmail';
+import SubmitBtn from './submitBtn';
+import { toast } from 'react-hot-toast';
 
 interface ContactProps {
   ptype: string;
 }
 
 export default function Contact({ ptype }: ContactProps) {
-  const [hpv, setHPV] = useState("");
+  const [hpv, setHPV] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [isManagedVisible, setIsManagedVisible] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const [projectType, setSelectedprojectType] = useState("Low or No Code");
-  const [managedType, setSelectedManagedType] = useState("No");
+  const [projectType, setSelectedprojectType] = useState('Low or No Code');
+  const [managedType, setSelectedManagedType] = useState('No');
 
-  const [plan, setPlan] = useState("");
+  const [plan, setPlan] = useState('');
 
   useEffect(() => {
-    if (ptype === "Start-Up" || ptype === "Pro" || ptype === "Business") {
+    if (ptype === 'Start-Up' || ptype === 'Pro' || ptype === 'Business') {
       setPlan(ptype);
       setCurrentPage(2);
     }
 
-    if (ptype === "P") {
+    if (ptype === 'P') {
       setCurrentPage(1);
-      setPlan("Start-Up");
+      setPlan('Start-Up');
     }
   }, []);
 
@@ -43,7 +43,7 @@ export default function Contact({ ptype }: ContactProps) {
     const projectType = event.target.value;
     setSelectedprojectType(projectType);
     setIsManagedVisible(
-      projectType === "Low or No Code" || projectType === "Custom Code"
+      projectType === 'Low or No Code' || projectType === 'Custom Code'
     );
   };
   const handleManagedTypeChange = (
@@ -71,14 +71,14 @@ export default function Contact({ ptype }: ContactProps) {
         <form
           action={async (formData) => {
             const { error } = await sendEmail(formData);
-            if (hpv !== "") {
-              toast.error("Form submission failed.");
+            if (hpv !== '') {
+              toast.error('Form submission failed.');
               return;
             }
             if (error) {
               toast.error(error);
             } else {
-              toast.success("Email sent successfully!");
+              toast.success('Email sent successfully!');
               setIsSubmitted(true);
             }
             setIsSubmitting(false);
@@ -89,7 +89,7 @@ export default function Contact({ ptype }: ContactProps) {
             {/* Page 1 - Plan */}
             <div
               className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-opacity duration-500 ease-out w-full ${
-                currentPage === 1 ? "opacity-100 pointer-events-auto" : ""
+                currentPage === 1 ? 'opacity-100 pointer-events-auto' : ''
               }`}
             >
               <h2 className="text-2xl text-center font-bold mb-4 ml-2.5">
@@ -109,14 +109,14 @@ export default function Contact({ ptype }: ContactProps) {
                   <label
                     htmlFor="plan1"
                     className={`flex flex-col justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl cursor-pointer transition-all duration-500 group ${
-                      plan === "Start-Up"
-                        ? "bg-bgD text-white scale-105"
-                        : "hover:bg-gray50"
+                      plan === 'Start-Up'
+                        ? 'bg-bgD text-white scale-105'
+                        : 'hover:bg-gray50'
                     }`}
                   >
                     <span
                       className={`${
-                        plan === "Start-Up" ? "text-white" : "text-black"
+                        plan === 'Start-Up' ? 'text-white' : 'text-black'
                       }`}
                     >
                       Start-Up
@@ -133,14 +133,14 @@ export default function Contact({ ptype }: ContactProps) {
                   <label
                     htmlFor="plan2"
                     className={`flex flex-col cursor-pointer justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl transition-all duration-500 group ${
-                      plan === "Pro"
-                        ? "bg-bgD text-white scale-105"
-                        : "hover:bg-gray50"
+                      plan === 'Pro'
+                        ? 'bg-bgD text-white scale-105'
+                        : 'hover:bg-gray50'
                     }`}
                   >
                     <span
                       className={`${
-                        plan === "Pro" ? "text-white" : "text-black "
+                        plan === 'Pro' ? 'text-white' : 'text-black '
                       }`}
                     >
                       Pro
@@ -157,14 +157,14 @@ export default function Contact({ ptype }: ContactProps) {
                   <label
                     htmlFor="plan3"
                     className={`flex flex-col cursor-pointer justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl transition-all duration-500 group ${
-                      plan === "Business"
-                        ? "bg-bgD text-white scale-105"
-                        : "hover:bg-gray50"
+                      plan === 'Business'
+                        ? 'bg-bgD text-white scale-105'
+                        : 'hover:bg-gray50'
                     }`}
                   >
                     <span
                       className={`${
-                        plan === "Business" ? "text-white" : "text-black"
+                        plan === 'Business' ? 'text-white' : 'text-black'
                       }`}
                     >
                       Business
@@ -173,7 +173,7 @@ export default function Contact({ ptype }: ContactProps) {
                 </div>
                 <input
                   type="text"
-                  style={{ display: "none" }}
+                  style={{ display: 'none' }}
                   name="plan"
                   id="plan"
                   defaultValue={plan}
@@ -192,7 +192,7 @@ export default function Contact({ ptype }: ContactProps) {
             {/* Page 2 - Website Info - Type and SEO */}
             <div
               className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-opacity duration-500 ease-out w-full ${
-                currentPage === 2 ? "opacity-100 pointer-events-auto" : ""
+                currentPage === 2 ? 'opacity-100 pointer-events-auto' : ''
               }`}
             >
               <div className="mb-4">
@@ -213,16 +213,16 @@ export default function Contact({ ptype }: ContactProps) {
                     <label
                       htmlFor="projectType1"
                       className={`flex flex-col cursor-pointer justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl transition-all duration-500 group ${
-                        projectType === "Low or No Code"
-                          ? "bg-bgD text-white scale-105"
-                          : "hover:bg-gray50"
+                        projectType === 'Low or No Code'
+                          ? 'bg-bgD text-white scale-105'
+                          : 'hover:bg-gray50'
                       }`}
                     >
                       <span
                         className={`${
-                          projectType === "Low or No Code"
-                            ? "text-white"
-                            : "text-black"
+                          projectType === 'Low or No Code'
+                            ? 'text-white'
+                            : 'text-black'
                         }`}
                       >
                         Low or No
@@ -241,16 +241,16 @@ export default function Contact({ ptype }: ContactProps) {
                     <label
                       htmlFor="projectType2"
                       className={`flex flex-col cursor-pointer justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl transition-all duration-500 group ${
-                        projectType === "Custom Code"
-                          ? "bg-bgD text-white scale-105"
-                          : "hover:bg-gray50"
+                        projectType === 'Custom Code'
+                          ? 'bg-bgD text-white scale-105'
+                          : 'hover:bg-gray50'
                       }`}
                     >
                       <span
                         className={`${
-                          projectType === "Custom Code"
-                            ? "text-white"
-                            : "text-black "
+                          projectType === 'Custom Code'
+                            ? 'text-white'
+                            : 'text-black '
                         }`}
                       >
                         Custom Code
@@ -267,16 +267,16 @@ export default function Contact({ ptype }: ContactProps) {
                     <label
                       htmlFor="projectType3"
                       className={`flex flex-col cursor-pointer justify-center items-center text-center h-[5rem] w-[90px] border-2 border-gray m-auto rounded-lg relative text-tl transition-all duration-500 group ${
-                        projectType === "No Online Presence"
-                          ? "bg-bgD text-white scale-105"
-                          : "hover:bg-gray50"
+                        projectType === 'No Online Presence'
+                          ? 'bg-bgD text-white scale-105'
+                          : 'hover:bg-gray50'
                       }`}
                     >
                       <span
                         className={`${
-                          projectType === "No Online Presence"
-                            ? "text-white"
-                            : "text-black"
+                          projectType === 'No Online Presence'
+                            ? 'text-white'
+                            : 'text-black'
                         }`}
                       >
                         No Online Presence
@@ -285,14 +285,14 @@ export default function Contact({ ptype }: ContactProps) {
                   </div>
                   <input
                     type="text"
-                    style={{ display: "none" }}
+                    style={{ display: 'none' }}
                     name="projectType"
                     id="projectType"
                     defaultValue={projectType}
                   />
                 </div>
               </div>
-              <div style={{ display: "none" }}>
+              <div style={{ display: 'none' }}>
                 <input
                   type="text"
                   id="hp"
@@ -305,8 +305,8 @@ export default function Contact({ ptype }: ContactProps) {
               <div
                 className={`mb-4 transition-all duration-500 ease-in-out ${
                   isManagedVisible
-                    ? "max-h-[20rem] opacity-100 visible"
-                    : "max-h-0 opacity-0 invisible"
+                    ? 'max-h-[20rem] opacity-100 visible'
+                    : 'max-h-0 opacity-0 invisible'
                 }`}
               >
                 <h2 className="text-center text-2xl font-bold mb-6">
@@ -323,9 +323,9 @@ export default function Contact({ ptype }: ContactProps) {
                   <label
                     htmlFor="managed1"
                     className={`"flex flex-col cursor-pointer justify-center items-center text-center h-[2.75rem] w-[6rem] border-2 border-gray m-auto rounded-lg relative text-td transition-all duration-500" ${
-                      managedType === "Yes"
-                        ? "bg-bgD text-white scale-105 flex flex-col justify-center items-center text-center"
-                        : "flex flex-col justify-center items-center text-center transistion-bg hover:bg-gray50 duration-500"
+                      managedType === 'Yes'
+                        ? 'bg-bgD text-white scale-105 flex flex-col justify-center items-center text-center'
+                        : 'flex flex-col justify-center items-center text-center transistion-bg hover:bg-gray50 duration-500'
                     }`}
                   >
                     <span>Yes</span>
@@ -342,9 +342,9 @@ export default function Contact({ ptype }: ContactProps) {
                   <label
                     htmlFor="managed2"
                     className={`"flex flex-col cursor-pointer justify-center items-center text-center h-[2.75rem] w-[6rem] border-2 border-gray m-auto rounded-lg relative text-td transition-all duration-500" ${
-                      managedType === "No"
-                        ? "bg-bgD text-white scale-105 flex flex-col justify-center items-center text-center"
-                        : "flex flex-col justify-center items-center text-center hover:bg-gray50"
+                      managedType === 'No'
+                        ? 'bg-bgD text-white scale-105 flex flex-col justify-center items-center text-center'
+                        : 'flex flex-col justify-center items-center text-center hover:bg-gray50'
                     }`}
                   >
                     <span>No</span>
@@ -352,7 +352,7 @@ export default function Contact({ ptype }: ContactProps) {
                 </div>
                 <input
                   type="text"
-                  style={{ display: "none" }}
+                  style={{ display: 'none' }}
                   name="managed"
                   id="managed"
                   defaultValue={managedType}
@@ -371,7 +371,7 @@ export default function Contact({ ptype }: ContactProps) {
             {/* Page 3 - First, Last, Email, Message */}
             <div
               className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-opacity duration-500 ease-out w-full ${
-                currentPage === 3 ? "opacity-100 pointer-events-auto" : ""
+                currentPage === 3 ? 'opacity-100 pointer-events-auto' : ''
               }`}
             >
               <h2 className="text-2xl text-center font-bold mb-4">
@@ -434,7 +434,7 @@ export default function Contact({ ptype }: ContactProps) {
                   id="message"
                   name="message"
                   placeholder="Your message"
-                  style={{ resize: "none" }}
+                  style={{ resize: 'none' }}
                   className="mt-1 h-[90px] block w-full py-2 px-3 border-2 border-gray bg-tl rounded-md shadow-sm focus:outline-none focus:ring-gray50 focus:border-gray50 sm:text-sm"
                 ></textarea>
               </div>
@@ -447,7 +447,7 @@ export default function Contact({ ptype }: ContactProps) {
       )}
       {isSubmitted && (
         <div className="text-center mt-8 text-td bg-tl">
-          Quote Sent! Expect an email from our team soon.
+          Quote Sent! Expect an email from the NSP&apos;s team soon.
         </div>
       )}
     </>

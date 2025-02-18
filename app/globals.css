@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,7 +46,7 @@ select {
   margin-top: 0.75rem;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   appearance: none;
 }
 
@@ -112,6 +112,17 @@ input[type="radio"] {
   transition: background-color 0.3s ease-in-out;
 }
 
+.btn3 {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid var(--gray50);
+  background-color: var(--tl);
+  font-family: var(--text2);
+  color: var(--bg);
+  transition: background-color 0.3s ease-in-out;
+}
+
 .btn:hover {
   background-color: var(--tl);
   color: var(--bg);
@@ -119,6 +130,11 @@ input[type="radio"] {
 }
 .btn2:hover {
   background-color: var(--gray50);
+  cursor: pointer;
+}
+.btn3:hover {
+  background-color: var(--bg-d);
+  color: var(--tl);
   cursor: pointer;
 }
 

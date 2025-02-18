@@ -45,8 +45,8 @@ const Blog: React.FC = () => {
           </h2>
           <p className="text-gray-500 mb-2">Published on April 22, 2024</p>
           <p className="text-base mb-4 leading-6">
-            In this post, we explain our process for greatly improving the form
-            and function of our clients&apos; websites.
+            In this post, I explain NSP&apos;s process for greatly improving the
+            form and function of the clients&apos; websites.
           </p>
           <div className="mt-auto">
             <Link

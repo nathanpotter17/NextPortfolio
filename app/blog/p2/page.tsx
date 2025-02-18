@@ -20,28 +20,27 @@ export default function Post1() {
         <p>
           In the digital age, your website is not just a brochure; it&apos;s a
           gateway to your brand&apos;s story, a tool for engagement, and a
-          platform for growth. At NSP Studios, we understand the importance of a
-          seamless, user-friendly online experience. Our dedicated objective is
-          to transform the ordinary browsing experience into an unparalleled,
-          seamless journey. We ensure users can effortlessly navigate and
-          extract maximum value from the content, or be flowed into secure pages
-          or areas where conversion happens, thus improving your brand&apos;s
-          CTR.
+          platform for growth. I understand the importance of a seamless,
+          user-friendly online experience. NSP&apos;s dedicated objective is to
+          transform the ordinary browsing experience into an unparalleled,
+          seamless journey. I ensure users can effortlessly navigate and extract
+          maximum value from the content, or be flowed into secure pages or
+          areas where conversion happens, thus improving your brand&apos;s CTR.
         </p>
         <div className="text-lg leading-6">
           <h1 className="text-4xl font-medium mb-2.5 mt-3">Web Applications</h1>
           <p>
-            We specialize in creating custom web applications tailored to meet
+            I specialize in creating custom web applications tailored to meet
             your unique needs. By combining cutting-edge technologies with
-            expert development skills, we deliver powerful and user-friendly web
+            expert development skills, I deliver powerful and user-friendly web
             applications that drive your business forward.
           </p>
           <h1 className="text-4xl font-medium mb-2.5 mt-3">
             User Experience Research
           </h1>
           <p>
-            Our UX service enhances user satisfaction and usability of your
-            digital products. We conduct research, optimize design, and
+            NSP&apos;s UX service enhances user satisfaction and usability of
+            your digital products. I conduct research, optimize design, and
             prioritize mobile-friendly experiences to drive engagement and
             improve conversions.
           </p>
@@ -52,7 +51,7 @@ export default function Post1() {
             Consider your average Wordpress, Godaddy, Wix, or similar website
             with ~ 6 pages & form functionality. Their scores usually look
             similar to the below, with no way to control it from within their
-            site builder. This was our last clients before score:
+            site builder. This was the last clients before score:
           </p>
           <br></br>
           <Image
@@ -159,10 +158,10 @@ export default function Post1() {
               demonstrates a commitment to diversity and user needs.
             </li>
             <li className="pt-2">
-              Optimized for Various Devices: Our websites are optimized for
-              different devices and screen sizes. This adaptability ensures that
-              users across desktops, tablets, and smartphones have a consistent
-              and enjoyable experience.
+              Optimized for Various Devices: NSP&apos;s websites are optimized
+              for different devices and screen sizes. This adaptability ensures
+              that users across desktops, tablets, and smartphones have a
+              consistent and enjoyable experience.
             </li>
             <li className="pt-2">
               Enhanced Brand Image: A fast, accessible, and professional website

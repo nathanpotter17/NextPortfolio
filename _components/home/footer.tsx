@@ -1,10 +1,9 @@
-"use client";
-import Image from "next/image";
-import { ContactForm } from "../contact/contactForm";
+'use client';
+import { ContactForm } from '../contact/contactForm';
 
 export const Footer = () => {
   const goToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
     <footer className="w-full h-auto text-white p-6 bg-bgD">
@@ -14,8 +13,8 @@ export const Footer = () => {
             Go to Top
           </button>
           <ContactForm
-            val="btn2 rounded-full w-auto"
-            ptype="Start-Up"
+            val="btn3 rounded-full w-auto"
+            ptype="P"
             text="Free Quote"
           />
         </div>

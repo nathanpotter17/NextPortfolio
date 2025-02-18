@@ -1,5 +1,5 @@
-import { ContactForm } from "../contact/contactForm";
-import Background from "./3DElement/background";
+import { ContactForm } from '../contact/contactForm';
+import Background from './3DElement/background';
 
 export const Hero = () => {
   return (

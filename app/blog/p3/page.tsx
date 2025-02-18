@@ -91,7 +91,7 @@ export default function Post3() {
             The goal of my project was to track eye position to help aid in
             measuring eye contact and put it on the web, except all I had was a
             Python file that uses OpenCV & DLib. Issue is, Pyodide, the WASM
-            runner for Python based WASM, will not work, because our project has
+            runner for Python based WASM, will not work, because the project has
             C++ dependencies within DLib that cannot be cross-compiled using
             only CPython.
           </p>
