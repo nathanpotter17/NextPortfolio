@@ -1,18 +1,23 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export const Customers = () => {
   return (
-    <section className="flex flex-col items-center justify-center pt-10 pb-5">
+    <section className="flex flex-col items-center justify-center pt-5 mb-16">
       <div className="flex justify-between p-1 gap-2 border-2 border-gray50 rounded-lg">
         <p className="text-sm px-2 text-gray-500">Testimonials</p>
       </div>
       <div className="text-center">
         <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
-          What our clients have to say
+          Client Success
         </h1>
         <p className="text-center pb-8 text-lg text-tl">
-          Hear what our satisfied customers have to say about our team and
+          Hear what my satisfied customers have to say about my team and
           services.
+          <br />
+          You can also read about it here:{' '}
+          <a href="https://nathanpotter.tech/blog/p2" className="text-blue-500">
+            Client Study - MMF
+          </a>
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 space-y-4">

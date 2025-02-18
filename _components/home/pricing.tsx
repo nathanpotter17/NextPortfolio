@@ -1,18 +1,19 @@
-import { Check } from "lucide-react";
-import { ContactForm } from "../contact/contactForm";
+import { Check } from 'lucide-react';
+import { ContactForm } from '../contact/contactForm';
 
 export const Pricing = () => {
   return (
-    <section className="flex flex-col items-center justify-center pt-10 pb-10">
+    <section className="flex flex-col items-center justify-center pt-5">
       <div className="flex justify-between p-1 gap-2 border-2 border-gray50 rounded-lg">
         <p className="text-sm px-2 text-gray-500">Pricing Options</p>
       </div>
       <div className="text-center">
         <h1 className="text-[3rem] lg:text-7xl sm:max-w-[320px] md:max-w-[512px] lg:max-w-[720px] mx-4 text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
-          Pricing Options for all SMBs
+          Pricing Options for Everyone
         </h1>
         <p className="text-center pb-8 p-2 text-lg text-tl">
-          Only pay for what you need, and upgrade at any time.
+          Only pay for what you need, and upgrade at any time. Billed month to
+          month until you cancel.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2">
@@ -91,11 +92,7 @@ export const Pricing = () => {
             <div className="flex items-center">
               <Check width={16} height={16} />
               <span className="ml-2">
-                Choose from Zapier, Stripe, and{" "}
-                <a href="/blog/p2" className="underline hover:cursor-pointer">
-                  more
-                </a>
-                .
+                Choose from Hubspot, Stripe, and more.
               </span>
             </div>
             <div className="flex items-center">
