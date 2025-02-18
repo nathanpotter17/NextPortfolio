@@ -204,7 +204,7 @@ export default function Post1() {
           Back to Blog
         </Link>
         <footer className="text-center mt-10 pt-5 border-t border-gray-200">
-          <p className="m-0 text-gray-500 text-sm">&copy; 2024 NSP Blog</p>
+          <p className="m-0 text-gray-500 text-sm">&copy; 2025 NSP Blog</p>
         </footer>
       </div>
     </article>

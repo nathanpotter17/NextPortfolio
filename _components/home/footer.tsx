@@ -21,7 +21,7 @@ export const Footer = () => {
       </div>
 
       <div className="mt-2 text-center">
-        <p>© 2024 NSP Studios. All rights reserved.</p>
+        <p>© 2025 NSP Studios. All rights reserved.</p>
       </div>
     </footer>
   );

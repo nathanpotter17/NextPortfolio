@@ -84,7 +84,7 @@ const Blog: React.FC = () => {
         </div>
       </div>
       <footer className="text-center mt-4 pt-5 pb-5 border-t border-gray50">
-        <p className="text-gray50 text-sm">&copy; 2024 NSP Blog</p>
+        <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
       </footer>
     </div>
   );
