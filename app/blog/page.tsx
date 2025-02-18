@@ -68,7 +68,7 @@ const Blog: React.FC = () => {
           <h2 className="font-bold text-xl mb-2">
             Using Payload CMS with NextJS
           </h2>
-          <p className="text-gray-500 mb-2">Published on December 18, 2025</p>
+          <p className="text-gray-500 mb-2">Published on December 18, 2024</p>
           <p className="text-base mb-4 leading-6">
             In the fast-paced world of e-commerce, creating a seamless and
             well-structured online shopping experience is crucial.
