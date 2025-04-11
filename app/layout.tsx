@@ -61,8 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     determiner: 'auto',
     title: 'NSP Studios: Delivering Simple & Effective Web Solutions',
-    description:
-      'Discover how NSP Studios can help you create custom web experiences.',
+    description: 'Enterprise quality Full Stack Web Development solutions.',
     images: [
       {
         url: '/L1-d.svg',

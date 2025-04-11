@@ -1,20 +1,9 @@
-import { Customers } from "@/_components/home/customers";
-import { Footer } from "@/_components/home/footer";
-import { Hero } from "@/_components/home/hero";
-import { Navbar } from "@/_components/home/navbar";
-import { Pricing } from "@/_components/home/pricing";
-import { Product } from "@/_components/home/product";
-import { Why } from "@/_components/home/why";
+import { Hero } from '@/_components/home/hero';
 
 export default function Home() {
   return (
-    <main className="font-InterTight flex min-h-screen flex-col items-center justify-between pt-[1rem]">
+    <main className="font-InterTight flex min-h-screen flex-col items-center justify-between">
       <Hero />
-      <Why />
-      <Product />
-      <Pricing />
-      <Customers />
-      <Footer />
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ContactForm } from '../contact/contactForm';
 import Background from './3DElement/background';
 
@@ -10,8 +11,11 @@ export const Hero = () => {
           <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4 pr-2 pl-2">
             Delivering Simple & Effective Web Solutions.
           </h1>
-          <div>
+          <div className="flex flex-row space-x-2">
             <ContactForm val="btn rounded-full" ptype="P" text="Free Quote" />
+            <Link href={'/about'} className="btn2 rounded-full">
+              About
+            </Link>
           </div>
         </div>
       </div>

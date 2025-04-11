@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useSpring, animated } from "@react-spring/web";
-import { useEffect, useState } from "react";
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { ArrowRight } from 'lucide-react';
+import { useSpring, animated } from '@react-spring/web';
 
 export const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const { transform } = useSpring({
     transform: isClicked
-      ? "rotate(90deg)"
+      ? 'rotate(90deg)'
       : isHovered
-      ? "rotate(45deg)"
-      : "rotate(0deg)",
+      ? 'rotate(45deg)'
+      : 'rotate(0deg)',
     config: { tension: 200, friction: 20 },
   });
 
@@ -31,7 +32,7 @@ export const Navbar = () => {
         onMouseEnter={() => setIsHovered(true)}
         onClick={() => setIsClicked(!isClicked)}
         onMouseLeave={() => setIsHovered(false)}
-        style={{ cursor: "pointer" }}
+        style={{ cursor: 'pointer' }}
       >
         <p>Menu</p>
         <animated.div style={{ transform }}>
@@ -39,13 +40,14 @@ export const Navbar = () => {
         </animated.div>
         <div
           className={`absolute top-8 right-0 mt-2 w-32 bg-white20 rounded-md text-white ${
-            isClicked ? "opacity-100 visible bg-gray" : "opacity-0 invisible"
+            isClicked ? 'opacity-100 visible bg-gray' : 'opacity-0 invisible'
           }`}
-          id="dorpdown"
+          id="dropdown"
           onMouseLeave={() => setIsClicked(false)}
         >
           <div className="flex flex-col p-2 space-y-2">
             <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
             <Link href="/blog">Blog</Link>
           </div>
         </div>
