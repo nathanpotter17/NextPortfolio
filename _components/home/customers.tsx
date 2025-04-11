@@ -11,7 +11,7 @@ export const Customers = () => {
           Client Success
         </h1>
         <p className="text-center pb-8 text-lg text-tl">
-          Hear what my satisfied customers have to say about my team and
+          Hear what my satisfied customers have to say about my team work and
           services.
           <br />
           You can also read about it here:{' '}

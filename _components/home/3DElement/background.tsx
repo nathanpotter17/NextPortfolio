@@ -1,8 +1,11 @@
-"use client";
-import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
-import { useInView } from "react-intersection-observer";
+'use client';
+
+import React, { Suspense, useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import { Canvas, useFrame } from '@react-three/fiber';
+import { AsciiRenderer } from '@react-three/drei';
+import * as THREE from 'three';
 
 const Scene = React.memo(
   React.forwardRef(() => {
@@ -36,8 +39,8 @@ const Scene = React.memo(
 
 export default function Background() {
   let [ref, inView] = useInView({
-    triggerOnce: false, // observe after the first intersection
-    initialInView: true, // Sets initial visibility to true
+    triggerOnce: false,
+    initialInView: true,
     threshold: 0.1,
   });
 
@@ -46,17 +49,25 @@ export default function Background() {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`w-full h-screen flex absolute z-[-1] transition-opacity duration-500 ${
-        inView ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <Suspense>
-        <Canvas>
-          <Scene />
-        </Canvas>
-      </Suspense>
-    </div>
+    <>
+      <div
+        ref={ref}
+        className={`w-full h-screen flex absolute z-[-1] transition-opacity duration-500 ${
+          inView ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <Suspense>
+          <Canvas>
+            <Scene />
+            <AsciiRenderer
+              fgColor="white"
+              bgColor="black"
+              characters=".000-_ 12 "
+              invert={true}
+            />
+          </Canvas>
+        </Suspense>
+      </div>
+    </>
   );
 }
