@@ -4,7 +4,6 @@ import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { AsciiRenderer } from '@react-three/drei';
 import * as THREE from 'three';
 
 const Scene = React.memo(
@@ -13,8 +12,12 @@ const Scene = React.memo(
     const sphere2 = useRef<THREE.Mesh>(null);
 
     useFrame(() => {
-      sphere.current?.rotateZ(0.003);
-      sphere2.current?.rotateZ(0.003);
+      if (sphere.current && sphere2.current) {
+        sphere.current?.rotateZ(0.003);
+        sphere.current?.rotateX(0.003);
+        sphere2.current?.rotateZ(0.003);
+        sphere2.current?.rotateX(0.003);
+      }
     });
 
     return (
@@ -59,12 +62,6 @@ export default function Background() {
         <Suspense>
           <Canvas>
             <Scene />
-            <AsciiRenderer
-              fgColor="white"
-              bgColor="black"
-              characters=".000-_ 12 "
-              invert={true}
-            />
           </Canvas>
         </Suspense>
       </div>

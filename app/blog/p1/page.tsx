@@ -99,8 +99,8 @@ export default function Post1() {
         >
           Back to Blog
         </Link>
-        <footer className="text-center mt-10 mb-24 pt-5 border-t border-gray-200">
-          <p className="m-0 text-gray-500 text-sm">&copy; 2025 NSP Blog</p>
+        <footer className="text-center pt-5 pb-5 border-t border-gray50 mt-12">
+          <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
         </footer>
       </div>
     </article>

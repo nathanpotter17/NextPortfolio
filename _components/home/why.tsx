@@ -10,7 +10,7 @@ export const Why = () => {
   return (
     <section className="flex flex-col items-center justify-center pb-5">
       <div className="flex justify-between p-1 gap-2 border-2 border-gray50 rounded-lg">
-        <p className="text-sm px-2 text-gray-500">Formula</p>
+        <p className="text-sm px-2 text-gray-500">Product</p>
       </div>
       <div className="text-center">
         <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
