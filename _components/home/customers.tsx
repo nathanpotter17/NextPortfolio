@@ -14,14 +14,14 @@ export const Customers = () => {
           Hear what my satisfied customers have to say about my team work and
           services.
           <br />
-          You can also read about it here:{' '}
+          You can also read about it here:<br></br>
           <a href="https://nathanpotter.tech/blog/p2" className="text-blue-500">
             Client Study - MMF
           </a>
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 space-y-4">
-        <div className="flex flex-col bg-bgD text-white lg:mt-4 p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray rounded-lg flex-grow">
+        <div className="flex flex-col bg-bgD text-white lg:mt-4 p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray50 rounded-lg flex-grow">
           <div className="flex-grow flex flex-col justify-between">
             <div className="mt-2 text-lg font-light">
               You have been great to work with - I have no complaints at all!
@@ -40,7 +40,7 @@ export const Customers = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray rounded-lg flex-grow">
+        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray50 rounded-lg flex-grow">
           <div className="flex-grow flex flex-col justify-between">
             <div className="mt-2 text-lg font-light">
               An effective problem solver and someone who produces incredibly
@@ -60,7 +60,7 @@ export const Customers = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray rounded-lg flex-grow">
+        <div className="flex flex-col bg-bgD text-white p-4 max-w-xs min-h-[120px] mx-2 border-2 border-gray50 rounded-lg flex-grow">
           <div className="flex-grow flex flex-col justify-between">
             <div className="mt-2 text-lg font-light">
               Very happy overall, time to support is extremely quick.

@@ -34,7 +34,7 @@ const Blog: React.FC = () => {
         </div>
         <div className="flex flex-col bg-bgD rounded-md p-6">
           <Image
-            src="/method.svg"
+            src="/methodd.svg"
             alt="Blog Post Image"
             className="rounded-lg mb-4 w-full h-auto object-cover"
             width={250}
