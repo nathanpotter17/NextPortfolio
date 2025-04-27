@@ -4,33 +4,36 @@ import Link from 'next/link';
 
 export default function Post1() {
   return (
-    <article className="max-w-screen-md mx-auto mt-10">
+    <article className="max-w-screen-md mx-auto mt-10 mb-10">
       <div className="text-left text-lg p-5">
         <br></br>
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
           Using Payload CMS with NextJS
         </h1>
-        <p className="text-white font-medium text-lg text-md mt-5">
-          Nathan Potter
-        </p>
-        <p className="text-acc4 mb-5 text-md">
+
+        <p className="text-blue-600 text-md mt-6">
           &#35;Experience, &#35;Full-Stack &middot; 3 min read &middot; December
           18, 2025
         </p>
-        <a
-          className="underline text-acc4"
-          href="https://github.com/nathanpotter17/NextE-Com"
-        >
-          E-Commerce Shop Example
-        </a>
+        <p className="text-black font-medium text-lg text-md mb-6">
+          Nathan Potter
+        </p>
+
         <div className="text-base leading-6">
-          <br />
+          <h1 className="text-4xl font-medium mb-2.5 mt-3">PayloadCMS</h1>
           <p>
             In the fast-paced world of e-commerce, creating a seamless and
             well-structured online shopping experience is crucial. Recently, I
             undertook a project that aimed to achieve just that, utilizing the
             powerful combination of Next.js and Payload CMS.
           </p>
+          <a
+            className="underline text-blue-600"
+            href="https://github.com/nathanpotter17/NextE-Com"
+          >
+            E-Commerce Shop Example
+          </a>
+          <br />
           <br />
           <h1 className="text-4xl font-medium mb-2.5 mt-3">Why NextJS?</h1>
           <p>
@@ -75,7 +78,7 @@ export default function Post1() {
             component re-creation.
           </p>
           <br />
-          <h1 className="text-lg mb-2.5">Conclusion</h1>
+          <h1 className="text-4xl font-medium mb-2.5 mt-3">Conclusion</h1>
           <p>
             Payload CMS stands as a testament to the capabilities of flexible
             data models in the realm of e-commerce. The integration of a robust
@@ -87,7 +90,7 @@ export default function Post1() {
         </div>
         <br />
         <a
-          className="underline text-acc4"
+          className="underline text-blue-600"
           href="https://www.youtube.com/watch?v=3JUsg-WsU9o"
         >
           Source: JavaScript Mastery
@@ -99,9 +102,6 @@ export default function Post1() {
         >
           Back to Blog
         </Link>
-        <footer className="text-center pt-5 pb-5 border-t border-gray50 mt-12">
-          <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
-        </footer>
       </div>
     </article>
   );

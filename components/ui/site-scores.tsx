@@ -201,7 +201,7 @@ export default function SiteScores() {
         <div>
           Lighthouse Performance Score: {scores['BEM Direct'].performance}
         </div>
-        <h2 className="text-xl font-bold mt-4">Other Sites</h2>
+        <h2 className="text-xl font-bold mt-4">My Other Scores</h2>
         {Object.entries(scores).map(([site, siteScores]) => (
           <div
             key={site}
@@ -217,7 +217,7 @@ export default function SiteScores() {
             SEO: {siteScores.seo}
           </div>
         ))}
-        <h1 className="text-[3rem] md:text-[56px] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-12 pr-2 pl-2">
+        <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-12 pr-2 pl-2">
           Run a Live Test on your Site, from Anywhere.
         </h1>
         <div

@@ -5,18 +5,19 @@ import Link from 'next/link';
 
 export default function Post3() {
   return (
-    <article className="max-w-screen-md mx-auto mt-10">
+    <article className="max-w-screen-md mx-auto mt-10 mb-10">
       <div className="text-left text-lg p-5">
         <br />
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
           Compiling C/C++ to WebAssembly with Emscripten
         </h1>
-        <p className="text-white font-medium text-lg text-md mt-5">
-          Nathan Potter
-        </p>
-        <p className="text-acc4 mb-5 text-md">
+
+        <p className="text-blue-600 mt-6 text-md">
           #WebAssembly, #Emscripten &middot; 3 min read &middot; January 26,
           2025
+        </p>
+        <p className="text-black font-medium text-lg text-md mb-6">
+          Nathan Potter
         </p>
 
         <div className="text-base leading-6">
@@ -34,7 +35,7 @@ export default function Post3() {
             repository for all things Web Assembly.
           </p>
           <a
-            className="underline text-acc4"
+            className="underline text-blue-600"
             href="https://github.com/nathanpotter17/emcc-wasm"
           >
             My Emscripten WebAssembly Example
@@ -50,7 +51,7 @@ export default function Post3() {
             WebAssembly. You can find detailed installation instructions in the
             official Emscripten documentation, or see my{' '}
             <a
-              className="underline text-acc4"
+              className="underline text-blue-600"
               href="https://github.com/nathanpotter17/emcc-wasm/blob/main/README.md"
             >
               README.md
@@ -125,7 +126,7 @@ export default function Post3() {
             more information on the WebAssembly stack machine, WASM Memory
             Model, and available environments, see{' '}
             <a
-              className="underline text-acc4"
+              className="underline text-blue-600"
               href="https://webassembly.github.io/spec/core/"
             >
               the core spec
@@ -156,7 +157,7 @@ export default function Post3() {
           <p>See the full breakdown here:</p>
 
           <a
-            className="underline text-acc4"
+            className="underline text-blue-600"
             href="https://github.com/nathanpotter17/emcc-wasm/tree/main/src/library#readme"
           >
             The Full Breakdown
@@ -176,14 +177,14 @@ export default function Post3() {
         </div>
         <br />
         <a
-          className="underline text-acc4"
+          className="underline text-blue-600"
           href="https://emscripten.org/docs/getting_started/index.html"
         >
           Source: Emscripten Official Documentation
         </a>
         <br />
         <a
-          className="underline text-acc4"
+          className="underline text-blue-600"
           href="https://github.com/nathanpotter17/emcc-wasm"
         >
           Source: emcc-wasm (my repository)
@@ -195,9 +196,6 @@ export default function Post3() {
         >
           Back to Blog
         </Link>
-        <footer className="text-center pt-5 pb-5 border-t border-gray50 mt-12">
-          <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
-        </footer>
       </div>
     </article>
   );

@@ -5,17 +5,18 @@ import ContactForm from '../../../../components/forms/resend/sendEmail';
 
 export default function Post1() {
   return (
-    <article className="max-w-screen-md mx-auto mt-10">
+    <article className="max-w-screen-md mx-auto mt-10 mb-10">
       <div className="text-left text-lg  p-5">
         <br></br>
         <h1 className="text-5xl font-bold mb-2.5 mt-3">
           Client Success Stories: My Marketing Fitness
         </h1>
-        <p className="text-white font-medium text-lg text-md mt-5">
-          Nathan Potter
-        </p>
-        <p className="text-acc4 mb-5 text-md">
+
+        <p className="text-blue-600 text-md mt-6">
           &#35;Strategy, &#35;Design &middot; 4 min read &middot; April 22, 2024
+        </p>
+        <p className="text-black font-medium text-lg text-md mb-6">
+          Nathan Potter
         </p>
         <p>
           In the digital age, your website is not just a brochure; it&apos;s a
@@ -76,7 +77,7 @@ export default function Post1() {
             for this year.
           </p>
           <a
-            className="underline text-acc4"
+            className="underline text-blue-600"
             href="https://www.tooltester.com/en/blog/website-loading-time-statistics/#Analyzing_The_Worlds_Top_100_Websites"
           >
             Source: ToolTester
@@ -202,9 +203,6 @@ export default function Post1() {
         >
           Back to Blog
         </Link>
-        <footer className="text-center pt-5 pb-5 border-t border-gray50 mt-12">
-          <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
-        </footer>
       </div>
     </article>
   );
