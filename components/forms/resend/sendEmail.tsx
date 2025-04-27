@@ -33,51 +33,57 @@ export default function ContactForm({ classes, buttonText }: ContactFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const check = {
-      email: false,
-      phone: false,
-    };
 
     const phoneNumberPattern =
-      /^(\+1\s)??(1\s)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/;
-    if (phoneNumberPattern.test(formData.phoneNumber.trim())) {
-      check.phone = true;
-    } else {
-      alert('Ensure phone number is properly formatted.');
-      return;
-    }
-
+      /^(\+1\s?)?(1\s?)?(\()?(\d{3})(\))?[-.\s]?(\d{3})[-.\s]?(\d{4})$/;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (emailPattern.test(formData.email)) {
-      check.email = true;
-    } else {
-      alert('Ensure email is properly formatted.');
+
+    const { firstName, lastName, email, phoneNumber, message } = formData;
+
+    if (!phoneNumberPattern.test(phoneNumber.trim())) {
+      alert('Please ensure the phone number is properly formatted.');
       return;
     }
 
-    if (check.email === true && check.phone === true) {
-      try {
-        setSub(true);
-        const res = await fetch('/api/resend/send', {
-          method: 'POST',
-          body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.email,
-            email: formData.email,
-            phone: formData.phoneNumber,
-            message: formData.message,
-          }),
-        });
+    if (!emailPattern.test(email.trim())) {
+      alert('Please ensure the email address is properly formatted.');
+      return;
+    }
 
-        if (res.ok) {
-          router.push('/thank-you');
-        } else {
-          alert('There was an error submitting the form.');
-        }
-      } catch (err) {
-        console.error(err);
-        alert('Submission failed.');
+    if (!firstName || !lastName || !email || !phoneNumber || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+
+    try {
+      setSub(true);
+
+      const res = await fetch('/api/resend/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          phone: phoneNumber,
+          message,
+        }),
+      });
+
+      if (res.ok) {
+        router.push('/thank-you');
+      } else {
+        const errorData = await res.json().catch(() => ({}));
+        console.error('Server error:', errorData);
+        alert('There was an error submitting the form.');
       }
+    } catch (err) {
+      console.error('Network or unexpected error:', err);
+      alert('Submission failed. Please try again.');
+    } finally {
+      setSub(false);
     }
   };
 
@@ -94,20 +100,20 @@ export default function ContactForm({ classes, buttonText }: ContactFormProps) {
       ) : (
         <>
           <div
-            className="fixed inset-0 bg-white z-10 flex items-center justify-center min-h-screen"
-            style={{ marginInlineEnd: '0px' }}
+            className="fixed inset-0 bg-gray-900/80 flex items-center justify-center min-h-screen"
+            style={{ marginInlineEnd: '0px', zIndex: 10 }}
           >
             <button
               className="absolute top-4 left-4 text-tl text-2xl cursor-pointer z-20"
               onClick={toggleModal}
             >
-              <X color="black" size={24} />
+              <X color="white" size={24} />
             </button>
-            <div className="max-w-md mx-auto p-8 bg-white rounded-2xl shadow-lg mt-8">
+            <div className="max-w-sm mx-auto p-8 bg-white rounded-2xl shadow-lg mt-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                 Contact
               </h2>
-              <form onSubmit={handleSubmit} className="max-w-md space-y-4">
+              <form onSubmit={handleSubmit} className="max-w-sm space-y-4">
                 <div className="flex gap-4">
                   <div className="w-full">
                     <label
@@ -203,7 +209,7 @@ export default function ContactForm({ classes, buttonText }: ContactFormProps) {
                 <button
                   type="submit"
                   disabled={sub}
-                  className="w-full py-3 px-6 bg-green-600 text-white rounded-lg hover:bg-gray-700 transition duration-300"
+                  className={`w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-blue-900 cursor-pointer ${sub ? 'animate-pulse infinite' : ''} text-white rounded-lg hover:bg-gray-700 transition duration-300`}
                 >
                   {sub ? 'Submitting...' : 'Send Message'}
                 </button>

@@ -5,6 +5,7 @@ import { useCart } from '../../../context/CartContext';
 import { useRouter } from 'next/router';
 import { Check } from 'lucide-react';
 import ContactForm from '../../../components/forms/resend/sendEmail';
+import Image from 'next/image';
 
 interface Product {
   id: string;
@@ -107,7 +108,7 @@ export default function ProductPage() {
         <div className="flex flex-col md:flex-row w-full">
           <div className="md:w-1/2 p-8 flex flex-col items-center">
             <Suspense fallback={<div>Loading image...</div>}>
-              <img
+              <Image
                 id="product-image"
                 src={product.images[0] || '/notavail.svg'}
                 alt={product.name}

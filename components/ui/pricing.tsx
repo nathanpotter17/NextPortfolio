@@ -35,7 +35,7 @@ export const Pricing = () => {
           <div className="space-y-[1rem] text-center">
             <div className="flex items-center">
               <Check color="black" size={16} />
-              <span className="ml-2">Custom Form 3k emails/mo*</span>
+              <span className="ml-2">Custom Forms 3k emails/mo*</span>
             </div>
             <div className="flex items-center">
               <Check color="black" size={16} />
@@ -61,7 +61,8 @@ export const Pricing = () => {
           <div className="flex justify-center mt-auto pt-[2rem]">
             <Link
               href="/products/prod_SCIzROaMxMXTCy"
-              className="bg-gray-600/50 p-4 rounded-full w-full text-center hover:cursor-pointer hover:bg-gray-500 transition duration-300"
+              className="btn1 w-full text-center"
+              style={{ color: 'black' }}
             >
               Get Started Today
             </Link>
@@ -75,7 +76,7 @@ export const Pricing = () => {
           <h3 className="text-lg font-medium">Pro</h3>
           <div className="text-[4rem] font-normal py-2 pb-2">$3000</div>
           <div className="flex items-center">
-            <p className="text-lg font-semibold mr-1">$500</p>
+            <p className="text-lg font-semibold mr-1">$300</p>
             <span className="text-sm text-gray-500">/ monthly</span>
           </div>
           <br></br>
@@ -123,7 +124,7 @@ export const Pricing = () => {
           <div className="flex justify-center mt-auto pt-[2rem]">
             <Link
               href="/products/prod_SCMxjvLPAGflZD"
-              className="bg-gray-600/50 p-4 rounded-full w-full text-center hover:cursor-pointer hover:bg-gray-500 transition duration-300"
+              className="btn2 w-full text-center"
             >
               Get Started Today
             </Link>
@@ -133,7 +134,7 @@ export const Pricing = () => {
           <h3 className="text-lg font-medium">Business</h3>
           <div className="text-[4rem] font-normal py-2 pb-2">$5000</div>
           <div className="flex items-center">
-            <p className="text-lg font-semibold mr-1">$750</p>
+            <p className="text-lg font-semibold mr-1">$650+</p>
             <span className="text-sm text-gray-500">/ monthly</span>
           </div>
           <br></br>
@@ -141,7 +142,7 @@ export const Pricing = () => {
           <div className="space-y-[1rem] text-center">
             <div className="flex items-center">
               <Check width={16} height={16} color="black" />
-              <span className="ml-2">Custom Forms 100k+ emails/mo</span>
+              <span className="ml-2">Custom Forms 100k+ emails/mo*</span>
             </div>
             <div className="flex items-center">
               <Check width={16} height={16} color="black" />
@@ -183,7 +184,8 @@ export const Pricing = () => {
           <div className="flex justify-center mt-auto pt-[2rem]">
             <Link
               href="/products/prod_SCMvnyru99QezS"
-              className="bg-gray-600/50 p-4 rounded-full w-full text-center hover:cursor-pointer hover:bg-gray-500 transition duration-300"
+              className="btn1 w-full text-center"
+              style={{ color: 'black' }}
             >
               Get Started Today
             </Link>

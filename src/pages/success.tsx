@@ -29,12 +29,11 @@ export default function Success() {
           </h1>
 
           <button
-            id="home"
             onClick={() => {
               clearCart();
               router.push('/');
             }}
-            className="bg-blu text-white p-4 py-2 px-4 rounded-md"
+            className="bg-black text-white py-2 px-4 rounded cursor-pointer"
           >
             Go to Homepage
           </button>

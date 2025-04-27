@@ -10,22 +10,30 @@ export default async function handler(
 ) {
   const { firstName, lastName, email, phone, message } = req.body;
 
-  const { data, error } = await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
-    to: ['delivered@resend.dev'],
-    subject: 'Message from NSP Store',
-    react: await EmailTemplate({
-      firstName: firstName as string,
-      lastName: lastName as string,
-      phone: phone as string,
-      email: email as string,
-      message: message as string,
-    }),
-  });
+  console.log('Request Body:', firstName, lastName, email, phone, message);
 
-  if (error) {
-    return res.status(400).json(error);
+  try {
+    const { data, error } = await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>',
+      to: ['nathanscottpotter@gmail.com'],
+      subject: 'Message from NSP Web Services Store',
+      react: await EmailTemplate({
+        firstName: firstName as string,
+        lastName: lastName as string,
+        phone: phone as string,
+        email: email as string,
+        message: message as string,
+      }),
+    });
+
+    if (error) {
+      console.error('Error sending email:', error);
+      return res.status(400).json(error);
+    }
+
+    return res.status(200).json(data);
+  } catch (error) {
+    console.error('Server Error:', error);
+    return res.status(500).json({ error: 'Failed to send email' });
   }
-
-  return res.status(200).json(data);
 }

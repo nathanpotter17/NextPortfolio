@@ -1,18 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MenuSquare, ShoppingCart } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
 
 export const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { cart } = useCart();
   const router = useRouter();
+
+  useEffect(() => {
+    if (window !== undefined) {
+      setMounted(true);
+    }
+  }, [cart]);
 
   return (
     <nav
       aria-label="navigation"
-      className="relative flex h-[100px] w-full text-white justify-between items-center pt-4 pl-4 pb-4 bg-black z-10"
+      className="flex h-[100px] w-full text-white justify-between items-center pt-4 pl-4 pb-4 bg-black z-10"
     >
       <Link
         href="/"
@@ -33,6 +42,15 @@ export const Navbar = () => {
           className="px-4 py-2 bg-gray-800 text-white text-sm uppercase rounded-md relative"
         >
           <ShoppingCart />
+          {mounted && (
+            <>
+              {cart.length > 0 && (
+                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cart.length}
+                </div>
+              )}
+            </>
+          )}
         </button>
         <button
           className="text-white bg-gray-800 p-2 rounded-md focus:outline-none"
@@ -44,7 +62,7 @@ export const Navbar = () => {
           </span>
         </button>
         <div
-          className={`absolute top-8 right-0 mt-2 w-32 bg-gray-600 rounded-md text-white transistion duration-150 ${
+          className={`absolute z-10 top-8 right-0 mt-2 w-32 bg-gray-600 rounded-md text-white transistion duration-150 ${
             isClicked
               ? 'opacity-100 visible bg-gray-600'
               : 'opacity-0 invisible'

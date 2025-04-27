@@ -19,12 +19,12 @@ export default function Background() {
     <>
       <div
         ref={ref}
-        className={`w-full h-full mt-[-70px] flex absolute z-[1] transition-opacity duration-300 bg-black ${
+        className={`w-full h-[93vh] mt-[-70px] flex absolute z-[0] transition-opacity duration-300 bg-black ${
           inView ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <div
-          className="w-full h-[95vh] bg-fill bg-center bg-no-repeat scale-75"
+          className="w-full h-[93vh] bg-fill bg-center bg-no-repeat scale-75"
           style={{
             backgroundImage: `url('/bg.png')`,
           }}

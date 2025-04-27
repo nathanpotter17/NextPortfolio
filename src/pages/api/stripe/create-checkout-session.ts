@@ -46,7 +46,7 @@ export default async function handler(
       payment_method_types: ['card'],
       line_items,
       mode: 'payment',
-      success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/cancel`,
     });
 

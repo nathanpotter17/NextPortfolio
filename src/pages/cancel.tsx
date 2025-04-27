@@ -8,7 +8,7 @@ export default function Success() {
   const { clearCart } = useCart();
 
   return (
-    <div className="min-h-screen bg-white w-full justify-center flex flex-col my-6">
+    <div className="min-h-screen bg-white w-full justify-center flex flex-col mt-[-100px]">
       <div className="relative items-center flex flex-col w-full p-4">
         <h1 className="text-2xl text-black leading-[2rem] font-semibold text-center pb-4">
           You have successfully cancelled your purchase.
@@ -22,7 +22,7 @@ export default function Success() {
               clearCart();
               router.push('/');
             }}
-            className="bg-blu text-white py-2 px-4 rounded"
+            className="bg-black text-white py-2 px-4 rounded cursor-pointer"
           >
             Go to Homepage
           </button>
@@ -30,7 +30,7 @@ export default function Success() {
             onClick={() => {
               router.push('/');
             }}
-            className="bg-prpl text-white py-2 px-4 rounded"
+            className="bg-[#d3d3d3] text-black py-2 px-4 rounded cursor-pointer"
           >
             Continue Shopping
           </button>
