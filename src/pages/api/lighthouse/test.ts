@@ -26,6 +26,8 @@ export default async function handler(
       port: chrome.port,
     });
 
+    chrome.kill();
+
     return res.status(200).json({
       performanceScore: runnerResult!.lhr.categories.performance.score,
       fullReport: runnerResult!.report,
@@ -35,6 +37,7 @@ export default async function handler(
       fcp: runnerResult!.lhr.audits['first-contentful-paint'].numericValue,
     });
   } catch (error) {
+    console.error('Error processing Lighthouse report:', error);
     chrome.kill();
     return res
       .status(500)

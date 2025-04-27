@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Post3() {
   return (
@@ -188,12 +189,12 @@ export default function Post3() {
           Source: emcc-wasm (my repository)
         </a>
         <div className="my-8" />
-        <a
+        <Link
           className="p-4 bg-gray-500/50 rounded-full cursor-pointer"
           href="/blog"
         >
           Back to Blog
-        </a>
+        </Link>
         <footer className="text-center pt-5 pb-5 border-t border-gray50 mt-12">
           <p className="text-gray50 text-sm">&copy; 2025 NSP Blog</p>
         </footer>

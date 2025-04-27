@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-let scores = {
+const scores = {
   'My Marketing Fitness': {
     performance: 100,
     accessibility: 94,
@@ -202,7 +202,7 @@ export default function SiteScores() {
           Lighthouse Performance Score: {scores['BEM Direct'].performance}
         </div>
         <h2 className="text-xl font-bold mt-4">Other Sites</h2>
-        {Object.entries(scores).map(([site, siteScores], i) => (
+        {Object.entries(scores).map(([site, siteScores]) => (
           <div
             key={site}
             className="text-sm text-gray-500 text-center px-4 mb-2"
