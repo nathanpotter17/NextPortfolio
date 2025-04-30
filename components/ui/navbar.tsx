@@ -39,7 +39,7 @@ export const Navbar = () => {
           onClick={() => {
             router.push('/cart');
           }}
-          className="px-4 py-2 bg-gray-800 text-white text-sm uppercase rounded-md relative"
+          className="px-4 py-2 bg-gray-800 text-white text-sm uppercase rounded-md relative cursor-pointer"
         >
           <ShoppingCart />
           {mounted && (
@@ -53,7 +53,7 @@ export const Navbar = () => {
           )}
         </button>
         <button
-          className="text-white bg-gray-800 p-2 rounded-md focus:outline-none"
+          className="text-white bg-gray-800 p-2 rounded-md focus:outline-none cursor-pointer"
           aria-label="Toggle Menu"
           onClick={() => setIsClicked(!isClicked)}
         >
@@ -69,10 +69,18 @@ export const Navbar = () => {
           onMouseLeave={() => setIsClicked(false)}
         >
           <div className="flex flex-col p-2 space-y-2">
-            <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/about">About</Link>
-            <Link href="/blog">Blog</Link>
+            <Link href="/" className="cursor-pointer">
+              Home
+            </Link>
+            <Link href="/products" className="cursor-pointer">
+              Products
+            </Link>
+            <Link href="/about" className="cursor-pointer">
+              About
+            </Link>
+            <Link href="/blog" className="cursor-pointer">
+              Blog
+            </Link>
           </div>
         </div>
       </div>
