@@ -62,10 +62,8 @@ export const Navbar = () => {
           </span>
         </button>
         <div
-          className={`absolute z-10 top-8 right-0 mt-2 w-32 bg-gray-600 rounded-md text-white transistion duration-150 ${
-            isClicked
-              ? 'opacity-100 visible bg-gray-600'
-              : 'opacity-0 invisible'
+          className={`absolute z-10 top-8 right-0 mt-2 w-32 bg-gray-900 rounded-md text-white transistion duration-150 ${
+            isClicked ? 'opacity-100 visible' : 'opacity-0 hidden'
           }`}
           id="dropdown"
           onMouseLeave={() => setIsClicked(false)}

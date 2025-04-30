@@ -8,7 +8,7 @@ export default function Success() {
   const { clearCart } = useCart();
 
   return (
-    <div className="min-h-screen bg-white w-full justify-center flex flex-col mt-[-100px]">
+    <div className="min-h-screen bg-white w-full justify-center flex flex-col">
       <div className="relative items-center flex flex-col w-full p-4">
         <h1 className="text-2xl text-black leading-[2rem] font-semibold text-center pb-4">
           You have successfully cancelled your purchase.

@@ -53,7 +53,7 @@ export default function Page() {
         {products.map((product, i) => (
           <div
             key={i}
-            className="h-[500px] w-[350px] p-6 pt-0 bg-tl border-2 border-gray-500/20 rounded-lg text-td flex flex-col shadow-l"
+            className="h-[500px] w-[350px] p-6 pt-0 mx-4 bg-tl border-2 border-gray-500/20 rounded-lg text-td flex flex-col shadow-l"
           >
             <div
               className={

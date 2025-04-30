@@ -91,14 +91,6 @@ function describeArc(
 
 export default function SiteScores() {
   const [animated, setAnimated] = useState(false);
-  const [test, startTest] = useState(false);
-  const [loadTimes, setLoadTimes] = useState({
-    pf: 0,
-    boot: 0,
-    fcp: 0,
-    env: '',
-  });
-  const [terminalOutput, setTerminalOutput] = useState<string>('');
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimated(true), 300);
@@ -112,12 +104,19 @@ export default function SiteScores() {
   const angleStep = 360 / total;
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="flex flex-col items-center justify-center">
       <>
-        <h2 className="text-2xl font-bold mt-6 border-2 border-gray-800/20 text-gray-800/80 px-4 py-2 rounded-md text-center w-full max-w-xs">
-          Top Performer
-        </h2>
-        <h2 className="text-xl font-bold">BEM Direct Roofing</h2>
+        <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
+          <p className="text-sm px-2 text-gray-500">Performance</p>
+        </div>
+        <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pr-2 pl-2">
+          Existing Site Scores
+        </h1>
+        <p className="text-center m-2 max-w-[720px] pb-8 text-lg text-tl">
+          I only build sites that meet my high standards for performance and
+          user experience - guaranteeing a Google Lighthouse score of 90+.
+        </p>
+        <h2 className="text-xl font-bold mb-4">BEM Direct Roofing</h2>
         <p className="text-md text-gray-500 mt-[-1rem]">Hydration Stats</p>
         <svg width="200" height="200" viewBox="0 0 200 200">
           {displayStats.map((val, i) => {
@@ -194,7 +193,7 @@ export default function SiteScores() {
                 style={{ backgroundColor: colors[i] }}
               />
               <span>{label}</span>
-              <span className="text-gray-500 text-xs">{stats[i]}</span>
+              <span className="text-gray-500 text-xs">{stats[i]} sec</span>
             </div>
           ))}
         </div>
@@ -217,85 +216,6 @@ export default function SiteScores() {
             SEO: {siteScores.seo}
           </div>
         ))}
-        <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-12 pr-2 pl-2">
-          Run a Live Test on your Site, from Anywhere.
-        </h1>
-        <div
-          className={`${test ? 'h-[40px] opacity-100 animate-flip-up' : 'h-[0px] opacity-0 mt-[-2rem]'} w-[285px] text-sm text-white m-2 bg-black rounded-md border border-gray-700 p-2 transistion-all duration-300 ease-in-out`}
-        >
-          <p
-            id="output"
-            className={test ? 'animate-pulse infinite' : 'text-white'}
-          >
-            {terminalOutput}
-          </p>
-        </div>
-        <button
-          id="test-live-site"
-          className="mt-4 px-4 py-2 bg-green-800/80 text-white rounded transition-colors duration-300"
-          onClick={async () => {
-            startTest(true);
-            setTerminalOutput('');
-            const el = document.getElementById(
-              'test-live-site'
-            ) as HTMLButtonElement | null;
-
-            if (el) {
-              el.disabled = true;
-              el.innerText = 'Testing, please wait...';
-            }
-
-            setTerminalOutput('> Testing started...\n');
-
-            const response = await fetch('/api/lighthouse/test', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                url: 'https://www.mymarketingfitness.com',
-              }),
-            });
-            const data = await response.json();
-
-            setTerminalOutput(
-              `> Performance: ${data.performanceScore} | Boot Time: ${data.bootT.toFixed(2)} ms`
-            );
-
-            setLoadTimes({
-              pf: data.performanceScore || 0,
-              boot: data.bootT || 0,
-              fcp: data.fcp || 0,
-              env: data.env || 'Unknown',
-            });
-
-            if (el) {
-              el.disabled = false;
-              el.innerText = 'Testing Complete!';
-            }
-
-            setTimeout(() => {
-              if (el) {
-                el.innerText = 'Test Live Site';
-                startTest(false);
-              }
-            }, 8000);
-          }}
-        >
-          Test Live Site
-        </button>
-        <p className="text-xs text-gray-500/50">
-          *report data can differ greatly - public facing tests use dev tools*
-        </p>
-        {loadTimes && (
-          <div className="mt-2 text-sm text-gray-500 text-center mb-6">
-            Performance Score: {(loadTimes.pf * 100).toFixed(0)} | Non-User Boot
-            Time: {(loadTimes.boot / 1000).toFixed(2) + 'sec'} | FCP:{' '}
-            {(loadTimes.fcp / 1000).toFixed(2) + 'sec'} | Env:{' '}
-            {loadTimes.env.slice(0, 18) + '...'}
-            <br></br>
-          </div>
-        )}
       </>
     </div>
   );

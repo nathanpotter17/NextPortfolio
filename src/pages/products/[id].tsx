@@ -103,7 +103,7 @@ export default function ProductPage() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center lg:mt-[100px] p-4">
+    <section className="min-h-screen flex flex-col items-center lg:mt-[70px] p-4">
       <div className="max-w-3xl w-full bg-white overflow-hidden">
         <div className="flex flex-col md:flex-row w-full">
           <div className="md:w-1/2 p-8 flex flex-col items-center">
@@ -113,6 +113,8 @@ export default function ProductPage() {
                 src={product.images[0] || '/notavail.svg'}
                 alt={product.name}
                 className="w-full h-[300px] object-cover rounded-lg"
+                width={300}
+                height={320}
               />
             </Suspense>
           </div>

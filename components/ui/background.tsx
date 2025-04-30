@@ -24,7 +24,7 @@ export default function Background() {
         }`}
       >
         <div
-          className="w-full h-[93vh] bg-fill bg-center bg-no-repeat scale-75"
+          className="w-full h-[93vh] bg-fill bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/bg.png')`,
           }}

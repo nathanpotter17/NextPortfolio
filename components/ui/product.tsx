@@ -3,11 +3,11 @@ import { Hand, Lock, Server, Sparkles, UserRound, Watch } from 'lucide-react';
 export const Product = () => {
   return (
     <section className="flex flex-col items-center justify-center pt-5 pb-5">
-      <div className="flex justify-between p-1 gap-2 border-2 border-gray50 rounded-lg">
-        <p className="text-sm px-2 text-gray-500">Services</p>
+      <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
+        <p className="text-sm px-2 text-gray-500">Tech Stack</p>
       </div>
       <div className="text-center">
-        <h1 className="text-[3rem] md:text-7xl max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
+        <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           NSP Stack
         </h1>
       </div>
@@ -15,9 +15,9 @@ export const Product = () => {
         {[...Array(6)].map((_, index) => (
           <div
             key={index}
-            className="m-2 p-6 max-w-[300px] border-2 border-gray50 rounded-lg text-center bg-bgD"
+            className="m-2 p-6 max-w-[300px] border-2 border-gray-500/50 rounded-lg text-center bg-bgD"
           >
-            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-tl">
+            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-gray-300">
               {index === 0 ? (
                 <Sparkles color="black" fill="white" size={20} />
               ) : index === 1 ? (
