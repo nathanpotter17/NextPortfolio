@@ -16,7 +16,7 @@ export const Why = () => {
         <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Quality First
         </h1>
-        <p className="text-center m-2 max-w-[720px] pb-8 text-lg text-tl">
+        <p className="text-center m-2 max-w-[720px] pb-4 text-lg text-tl">
           Clean, scalable performance from day one.
           <br />
           No limitations, No bloated plugins, No shortcuts.

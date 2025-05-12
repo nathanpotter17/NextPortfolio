@@ -14,7 +14,7 @@ export const Customers = () => {
           Hear what my satisfied customers have to say about my team work and
           services.
           <br />
-          You can also read about it here:<br></br>
+          Read success stories on my blog:<br></br>
           <a href="https://nathanpotter.tech/blog/p2" className="text-blue-500">
             Client Study - MMF
           </a>

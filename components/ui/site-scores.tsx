@@ -104,7 +104,7 @@ export default function SiteScores() {
   const angleStep = 360 / total;
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mb-4">
       <>
         <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
           <p className="text-sm px-2 text-gray-500">Performance</p>
@@ -112,95 +112,104 @@ export default function SiteScores() {
         <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pr-2 pl-2">
           Existing Site Scores
         </h1>
-        <p className="text-center m-2 max-w-[720px] pb-8 text-lg text-tl">
-          I only build sites that meet my high standards for performance and
-          user experience - guaranteeing a Google Lighthouse score of 90+.
+        <p className="text-center m-2 max-w-[720px] pb-4 text-lg text-tl">
+          I only build sites that meet a high standard for performance and user
+          experience.
+          <br />
+          Google Lighthouse scores of 90+ are guaranteed.
         </p>
-        <h2 className="text-xl font-bold mb-4">BEM Direct Roofing</h2>
-        <p className="text-md text-gray-500 mt-[-1rem]">Hydration Stats</p>
-        <svg width="200" height="200" viewBox="0 0 200 200">
-          {displayStats.map((val, i) => {
-            const baseStart = i * angleStep + gap;
-            const baseEnd = baseStart + angleStep - gap * 2;
+        <div className="flex flex-col text-center bg-green-600/20 p-4 rounded-md border-6 border-green-800/20">
+          <h2 className="text-xl font-bold mb-4">BEM Direct Roofing</h2>
+          <p className="text-md text-gray-500 mt-[-1rem]">Hydration Stats</p>
+          <svg
+            className="mx-auto"
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+          >
+            {displayStats.map((val, i) => {
+              const baseStart = i * angleStep + gap;
+              const baseEnd = baseStart + angleStep - gap * 2;
 
-            const actualEnd =
-              baseStart + (baseEnd - baseStart) * Math.min(val, 1);
+              const actualEnd =
+                baseStart + (baseEnd - baseStart) * Math.min(val, 1);
 
-            const bgPath = describeArc(
-              center,
-              center,
-              radius,
-              baseStart,
-              baseEnd
-            );
-            const fgPath = describeArc(
-              center,
-              center,
-              radius,
-              baseStart,
-              actualEnd
-            );
+              const bgPath = describeArc(
+                center,
+                center,
+                radius,
+                baseStart,
+                baseEnd
+              );
+              const fgPath = describeArc(
+                center,
+                center,
+                radius,
+                baseStart,
+                actualEnd
+              );
 
-            return (
-              <g key={i} className="transition-all duration-500 ease-in-out">
-                {/* Background track */}
-                <path
-                  d={bgPath}
-                  fill="none"
-                  stroke="#e0e0e0"
-                  strokeWidth="10"
-                  strokeLinecap="round"
+              return (
+                <g key={i} className="transition-all duration-500 ease-in-out">
+                  {/* Background track */}
+                  <path
+                    d={bgPath}
+                    fill="none"
+                    stroke="#e0e0e0"
+                    strokeWidth="10"
+                    strokeLinecap="round"
+                  />
+                  {/* Animated foreground stat */}
+                  <path
+                    d={fgPath}
+                    fill="none"
+                    stroke={colors[i]}
+                    strokeWidth="10"
+                    strokeLinecap="round"
+                    style={{
+                      strokeDasharray: 300,
+                      strokeDashoffset: animated ? 0 : 300,
+                      transition: `stroke-dashoffset 0.8s ease-in-out ${i * 0.2}s`,
+                    }}
+                  />
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="60"
+                    fill="green"
+                    opacity="0.1"
+                    className={`${animated ? 'opacity-10' : 'opacity-0'} duration-300 ease-in-out`}
+                  />
+                  <text
+                    x="100"
+                    y="113"
+                    textAnchor="middle"
+                    className={`text-4xl fill-black font-bold antialiased transistion ${animated ? 'opacity-20' : 'opacity-0'} duration-300 ease-in-out`}
+                  >
+                    {scores['BEM Direct'].performance}
+                  </text>
+                </g>
+              );
+            })}
+          </svg>
+
+          <div className="grid grid-cols-5 gap-4 text-sm text-center">
+            {labels.map((label, i) => (
+              <div key={label} className="flex flex-col items-center">
+                <div
+                  className="w-3 h-3 rounded-full mb-1"
+                  style={{ backgroundColor: colors[i] }}
                 />
-                {/* Animated foreground stat */}
-                <path
-                  d={fgPath}
-                  fill="none"
-                  stroke={colors[i]}
-                  strokeWidth="10"
-                  strokeLinecap="round"
-                  style={{
-                    strokeDasharray: 300,
-                    strokeDashoffset: animated ? 0 : 300,
-                    transition: `stroke-dashoffset 0.8s ease-in-out ${i * 0.2}s`,
-                  }}
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="60"
-                  fill="green"
-                  opacity="0.1"
-                  className={`${animated ? 'opacity-10' : 'opacity-0'} duration-300 ease-in-out`}
-                />
-                <text
-                  x="100"
-                  y="113"
-                  textAnchor="middle"
-                  className={`text-4xl fill-black font-bold antialiased transistion ${animated ? 'opacity-20' : 'opacity-0'} duration-300 ease-in-out`}
-                >
-                  {scores['BEM Direct'].performance}
-                </text>
-              </g>
-            );
-          })}
-        </svg>
-
-        <div className="grid grid-cols-5 gap-4 text-sm text-center">
-          {labels.map((label, i) => (
-            <div key={label} className="flex flex-col items-center">
-              <div
-                className="w-3 h-3 rounded-full mb-1"
-                style={{ backgroundColor: colors[i] }}
-              />
-              <span>{label}</span>
-              <span className="text-gray-500 text-xs">{stats[i]} sec</span>
-            </div>
-          ))}
+                <span>{label}</span>
+                <span className="text-gray-500 text-xs">{stats[i]} sec</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-md mt-4">
+            Lighthouse Performance Score: {scores['BEM Direct'].performance}
+          </div>
         </div>
-        <div>
-          Lighthouse Performance Score: {scores['BEM Direct'].performance}
-        </div>
-        <h2 className="text-xl font-bold mt-4">My Other Scores</h2>
+        <h2 className="text-xl font-bold mt-6 mb-2">My Other Scores</h2>
         {Object.entries(scores).map(([site, siteScores]) => (
           <div
             key={site}

@@ -46,6 +46,7 @@ export default function ProductPage() {
     qty: 1,
   });
   const { addToCart } = useCart();
+  const [loading, setLoading] = useState(true);
   const { id } = router.query;
 
   useEffect(() => {
@@ -75,6 +76,7 @@ export default function ProductPage() {
 
         setProduct(data);
         setSubDesc(`1 ${data.name}`);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching product:', error);
       }
@@ -87,7 +89,12 @@ export default function ProductPage() {
     }
   }, [id]);
 
-  if (!product) return <p>Loading...</p>;
+  if (!product)
+    return (
+      <div
+        className={`min-h-screen bg-black transistion-opacity duration-150 ease-in-out ${loading ? 'opacity-100' : 'opacity-0'}`}
+      ></div>
+    );
 
   const addCooldown = () => {
     setCool(true);
@@ -103,7 +110,9 @@ export default function ProductPage() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center lg:mt-[70px] p-4">
+    <section
+      className={`min-h-screen flex flex-col items-center lg:mt-[70px] p-4 transistion-opacity duration-150 ease-in-out ${loading ? 'opacity-0' : 'opacity-100'}`}
+    >
       <div className="max-w-3xl w-full bg-white overflow-hidden">
         <div className="flex flex-col md:flex-row w-full">
           <div className="md:w-1/2 p-8 flex flex-col items-center">
