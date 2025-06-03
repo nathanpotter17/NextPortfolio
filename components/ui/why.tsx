@@ -8,7 +8,7 @@ export const Why = () => {
   const router = useRouter();
 
   return (
-    <section className="flex flex-col items-center justify-center pb-8">
+    <section className="flex flex-col items-center justify-center pb-6">
       <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
         <p className="text-sm px-2 text-gray-500 underline-500">Product</p>
       </div>

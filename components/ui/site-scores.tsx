@@ -104,7 +104,7 @@ export default function SiteScores() {
   const angleStep = 360 / total;
 
   return (
-    <div className="flex flex-col items-center justify-center mb-4">
+    <div className="flex flex-col items-center justify-center mt-6 mb-4">
       <>
         <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
           <p className="text-sm px-2 text-gray-500">Performance</p>

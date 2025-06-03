@@ -2,7 +2,7 @@ import { Hand, Lock, Server, Sparkles, UserRound, Watch } from 'lucide-react';
 
 export const Product = () => {
   return (
-    <section className="flex flex-col items-center justify-center pt-5 pb-5">
+    <section className="flex flex-col items-center justify-center pt-4 pb-4">
       <div className="flex justify-between p-1 gap-2 border-2 border-gray-500/50 rounded-lg">
         <p className="text-sm px-2 text-gray-500">Tech Stack</p>
       </div>
@@ -17,9 +17,9 @@ export const Product = () => {
             key={index}
             className="m-2 p-6 max-w-[300px] border-2 border-gray-500/50 rounded-lg text-center bg-bgD"
           >
-            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-gray-300">
+            <div className="flex justify-center items-center w-14 m-auto rounded-full p-4 bg-gray-200">
               {index === 0 ? (
-                <Sparkles color="black" fill="white" size={20} />
+                <Sparkles color="black" size={20} />
               ) : index === 1 ? (
                 <Watch color="black" size={20} />
               ) : index === 2 ? (
