@@ -118,7 +118,7 @@ export default function SiteScores() {
           <br />
           Google Lighthouse scores of 90+ are guaranteed.
         </p>
-        <div className="flex flex-col text-center bg-green-600/20 p-4 rounded-md border-6 border-green-800/20">
+        <div className="flex flex-col text-center bg-gray-300 text-black p-4 rounded-md border-6 border-gray-800/20">
           <h2 className="text-xl font-bold mb-4">BEM Direct Roofing</h2>
           <p className="text-md text-gray-500 mt-[-1rem]">Hydration Stats</p>
           <svg

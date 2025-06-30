@@ -16,7 +16,7 @@ export const Why = () => {
         <h1 className="text-[3.75rem] max-w-[730px] text-center font-bold tracking-[-2px] leading-[3.3rem] lg:leading-17.5 pt-4 pb-4">
           Quality First
         </h1>
-        <p className="text-center m-2 max-w-[720px] pb-4 text-lg text-tl">
+        <p className="text-center m-2 max-w-[720px] pb-4 text-lg">
           Clean, scalable performance from day one.
           <br />
           No limitations, No bloated plugins, No shortcuts.
@@ -29,7 +29,7 @@ export const Why = () => {
             router.push('/blog/p2');
           }}
         >
-          <h2 className="font-medium pb-2 text-3xl text-black">UX First.</h2>
+          <h2 className="font-medium pb-2 text-3xl text-white">UX First.</h2>
           <p className="leading-[1.35rem] text-base font-light">
             I put users at the center of every build — Mobile-friendly layouts,
             intuitive flows, and performance that keeps people engaged.
@@ -37,13 +37,13 @@ export const Why = () => {
           <div className="flex items-center pt-4 text-blue-600 underline transition-colors duration-150 group mt-auto">
             <Link
               href="/blog/p2"
-              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-tl"
+              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-blue-500"
             >
               Read more
             </Link>
             <ArrowRight
               size={20}
-              className="transition-colors duration-150 group-hover:text-tl"
+              className="transition-colors duration-150 group-hover:text-blue-500"
             />
           </div>
         </div>
@@ -53,21 +53,21 @@ export const Why = () => {
             router.push('/blog/p2');
           }}
         >
-          <h2 className="font-medium pb-2 text-3xl text-tl">Elastic.</h2>
-          <p className="leading-[1.35rem] text-base font-light text-tl">
+          <h2 className="font-medium pb-2 text-3xl text-white">Elastic.</h2>
+          <p className="leading-[1.35rem] text-base font-light text-white">
             I deliver scalable infrastructure that grows with you — no need to
             re-platform as your traffic or business evolves.
           </p>
           <div className="flex items-center pt-4 text-blue-600 underline transition-colors duration-150 group mt-auto">
             <Link
               href="/blog/p2"
-              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-tl"
+              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-blue-500"
             >
               Read more
             </Link>
             <ArrowRight
               size={20}
-              className="transition-colors duration-150 group-hover:text-tl"
+              className="transition-colors duration-150 group-hover:text-blue-500"
             />
           </div>
         </div>
@@ -77,21 +77,21 @@ export const Why = () => {
             router.push('/blog/p2');
           }}
         >
-          <h2 className="font-medium pb-2 text-3xl text-tl">Reliable.</h2>
-          <p className="leading-[1.35rem] text-base font-light text-tl">
+          <h2 className="font-medium pb-2 text-3xl text-white">Reliable.</h2>
+          <p className="leading-[1.35rem] text-base font-light text-white">
             I personally vet every provider and technology I use, providing
             peace of mind with real-world resilience and 99.9%+ uptime.
           </p>
           <div className="flex items-center pt-4 text-blue-600 underline transition-colors duration-150 group mt-auto">
             <Link
               href="/blog/p2"
-              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-tl"
+              className="text-md text-blue-600 underline pr-2 transition-colors duration-150 group-hover:text-blue-500"
             >
               Read more
             </Link>
             <ArrowRight
               size={20}
-              className="transition-colors duration-150 group-hover:text-tl"
+              className="transition-colors duration-150 group-hover:text-blue-500"
             />
           </div>
         </div>

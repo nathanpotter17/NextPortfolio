@@ -45,7 +45,7 @@ export const Product = () => {
                         ? 'Traffic and Conversion'
                         : 'Secure Apps'}
             </h3>
-            <p className="text-md text-gray-500">
+            <p className="text-md text-gray-400">
               {index === 0
                 ? 'Device targets are met with Quality UX.'
                 : index === 1

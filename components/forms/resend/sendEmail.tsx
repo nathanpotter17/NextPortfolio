@@ -100,7 +100,7 @@ export default function ContactForm({ classes, buttonText }: ContactFormProps) {
       ) : (
         <>
           <div
-            className="fixed inset-0 bg-gray-900/80 flex items-center justify-center min-h-screen"
+            className="fixed inset-0 bg-black flex items-center justify-center min-h-screen"
             style={{ marginInlineEnd: '0px', zIndex: 10 }}
           >
             <button
@@ -209,7 +209,7 @@ export default function ContactForm({ classes, buttonText }: ContactFormProps) {
                 <button
                   type="submit"
                   disabled={sub}
-                  className={`w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-blue-900 cursor-pointer ${sub ? 'animate-pulse infinite' : ''} text-white rounded-lg hover:bg-gray-700 transition duration-300`}
+                  className={`w-full py-3 px-6 bg-gradient-to-r from-gray-500 to-gray-900 cursor-pointer ${sub ? 'animate-pulse infinite' : ''} text-white rounded-lg transition duration-300`}
                 >
                   {sub ? 'Submitting...' : 'Send Message'}
                 </button>

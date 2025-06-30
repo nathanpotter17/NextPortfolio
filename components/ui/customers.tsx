@@ -21,7 +21,7 @@ export const Customers = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 space-y-4">
-        <div className="flex flex-col bg-white text-black p-4 max-w-xs mx-2 border-2 border-gray-500/50 rounded-lg flex-grow h-full">
+        <div className="flex flex-col bg-[#161616] text-white p-4 max-w-xs mx-2 border-4 border-gray-500/20 rounded-lg flex-grow h-full">
           <div className="flex-grow flex flex-col justify-between h-full">
             <div className="mt-2 text-lg font-light">
               You have been great to work with - I have no complaints at all!
@@ -40,7 +40,7 @@ export const Customers = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col bg-white text-black p-4 max-w-xs mx-2 border-2 border-gray-500/50 rounded-lg flex-grow h-full">
+        <div className="flex flex-col bg-[#161616] text-white p-4 max-w-xs mx-2 border-4 border-gray-500/20 rounded-lg flex-grow h-full">
           <div className="flex-grow flex flex-col justify-between h-full">
             <div className="mt-2 text-lg font-light">
               An effective problem solver and someone who produces incredibly
@@ -60,7 +60,7 @@ export const Customers = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col bg-white text-black p-4 max-w-xs mx-2 border-2 border-gray-500/50 rounded-lg flex-grow h-full">
+        <div className="flex flex-col bg-[#161616] text-white p-4 max-w-xs mx-2 border-4 border-gray-500/20 rounded-lg flex-grow h-full">
           <div className="flex-grow flex flex-col justify-between h-full">
             <div className="mt-2 text-lg font-light">
               Very happy overall, time to support is extremely quick.

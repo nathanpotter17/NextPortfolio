@@ -23,8 +23,8 @@ export default function Page() {
             </h2>
             <p className="text-gray-500 mb-2">Published on January 26, 2025</p>
             <p className="text-base mb-4 leading-6">
-              In this post, I explain a recent project where I used Web Assembly
-              to bring machine learning libraries into the browser.
+              Here, I explain a recent project where I used machine learning
+              libraries with Web Assembly.
             </p>
 
             <div className="mt-auto text-blue-500 font-bold hover:underline">
@@ -68,8 +68,8 @@ export default function Page() {
             </h2>
             <p className="text-gray-500 mb-2">Published on December 18, 2024</p>
             <p className="text-base mb-4 leading-6">
-              In the fast-paced world of e-commerce, creating a seamless and
-              well-structured online shopping experience is crucial.
+              Creating a seamless and well-structured online shopping experience
+              is crucial...
             </p>
             <div className="mt-auto text-blue-500 font-bold hover:underline">
               Read more

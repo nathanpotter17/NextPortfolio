@@ -1,27 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { MenuSquare, ShoppingCart } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+import { MenuSquare } from 'lucide-react';
 
 export const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const { cart } = useCart();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (window !== undefined) {
-      setMounted(true);
-    }
-  }, [cart]);
 
   return (
     <nav
       aria-label="navigation"
-      className="flex h-[100px] w-full text-white justify-between items-center pt-4 pl-4 pb-4 bg-black z-10"
+      className="flex h-[100px] w-full text-white justify-between items-center pt-4 pl-4 pb-4 bg-black z-[10]"
     >
       <Link
         href="/"
@@ -34,26 +23,7 @@ export const Navbar = () => {
         style={{ cursor: 'pointer' }}
       >
         <button
-          id="cartButton"
-          aria-label="cartButton"
-          onClick={() => {
-            router.push('/cart');
-          }}
-          className="px-4 py-2 bg-gray-800 text-white text-sm uppercase rounded-md relative cursor-pointer"
-        >
-          <ShoppingCart />
-          {mounted && (
-            <>
-              {cart.length > 0 && (
-                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                  {cart.length}
-                </div>
-              )}
-            </>
-          )}
-        </button>
-        <button
-          className="text-white bg-gray-800 p-2 rounded-md focus:outline-none cursor-pointer"
+          className="text-white bg-[#2a2a2a] p-2 rounded-md focus:outline-none cursor-pointer"
           aria-label="Toggle Menu"
           onClick={() => setIsClicked(!isClicked)}
         >
@@ -62,7 +32,7 @@ export const Navbar = () => {
           </span>
         </button>
         <div
-          className={`absolute z-10 top-8 right-0 mt-2 w-32 bg-gray-900 rounded-md text-white transistion duration-150 ${
+          className={`absolute z-10 top-8 right-0 mt-2 w-32 bg-[#2a2a2a] rounded-md text-white transistion duration-150 ${
             isClicked ? 'opacity-100 visible' : 'opacity-0 hidden'
           }`}
           id="dropdown"
@@ -71,9 +41,6 @@ export const Navbar = () => {
           <div className="flex flex-col p-2 space-y-2">
             <Link href="/" className="cursor-pointer">
               Home
-            </Link>
-            <Link href="/products" className="cursor-pointer">
-              Products
             </Link>
             <Link href="/about" className="cursor-pointer">
               About
