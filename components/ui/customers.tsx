@@ -20,7 +20,7 @@ export const Customers = () => {
           </a>
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-2 space-y-4">
         <div className="flex flex-col bg-[#161616] text-white p-4 max-w-xs mx-2 border-4 border-gray-500/20 rounded-lg flex-grow h-full">
           <div className="flex-grow flex flex-col justify-between h-full">
             <div className="mt-2 text-lg font-light">
@@ -76,6 +76,26 @@ export const Customers = () => {
                 />
               </div>
               <div className="ml-2 text-md font-bold">Dmitry L | CEO</div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col bg-[#161616] text-white p-4 max-w-xs mx-2 border-4 border-gray-500/20 rounded-lg flex-grow h-full">
+          <div className="flex-grow flex flex-col justify-between h-full">
+            <div className="mt-2 text-lg font-light">
+              Nathan P. from Salty Media is a powerhouse - smart, fast, and
+              always a joy to deal with.
+            </div>
+            <div className="flex items-center mt-auto pb-2 pt-6">
+              <div className="flex items-center">
+                <Image
+                  src="/logo.svg"
+                  alt="helping"
+                  width={40}
+                  height={40}
+                  className="rounded-md"
+                />
+              </div>
+              <div className="ml-2 text-md font-bold">Nikita Spitsyn | VP</div>
             </div>
           </div>
         </div>
